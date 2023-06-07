@@ -1,23 +1,132 @@
 <template>
-	<div class="root flex justify-center">
-		<div class="main flex justify-center px-5 gap-5 items-center max-w-[1200px] max-lg:flex-col">
-			<div class="content-left flex-1">
-				<div class="tag bg-gray-200 py-2 px-5 w-fit rounded-20">
-					<p><span class="text-yellow-100">New</span> - Checkout Ltes Let's Fly High</p>
+	<section class="pt-20 relative w-full">
+		<div class="root flex relative flex-col items-center justify-center">
+			<img src="https://uploads-ssl.webflow.com/602d59da29b66668b8758391/611237e7f56b2b6bf25911fd_home-stars-1-new.svg"
+						loading="lazy" width="1440" height="954" alt="" class="absolute -top-10 rotate-180 z-[-1]">
+			<img src="https://uploads-ssl.webflow.com/602d59da29b66668b8758391/611237e7f56b2b6bf25911fd_home-stars-1-new.svg"
+						loading="lazy" width="1440" height="954" alt="" class="absolute top-0 z-[-1]">
+			<img src="~/assets/img/planet-red.png" id="image2" class=" 
+			max-md:-top-10
+			h-[40px] w-[40px] absolute -top-5 right-[10%]" alt="">
+			<img src="~/assets/img/planet-brown.png" id="image"  class=" h-[60px] w-[60px] absolute top-[60%] right-[20%]" alt="">
+			<img src="~/assets/img/planet-yellow@3x.png" class="
+			max-md:-top-[15%]
+			absolute top-[3%] left-[10%]" alt="">
+			<div class="stars-bg_wrapper absolute top-0 left-0 overflow-hidden w-full flex justify-center">
+				<div class="relative w-full">
+					
 				</div>
-				<div class="content-text  w-full lg:w-[500px] flex flex-col gap-5">
-					<div class="title">
-					<h1 class="text-white text-4xl font-semibold">Hãy đến với mùa trại mới của LTES thôi nào - <span class="text-yellow-100">gét gô!!!</span></h1>
-					</div>
-					<div class="description">
-						<p>Với sứ mệnh mang đến một mùa trại cực đã Shortcut unites planning and development into a single experience with tightly integrated Docs, Issue Tracking, and Sprint Planning features.</p>
-					</div>
-				</div>
-				<button class="py-3 px-3 mt-5 rounded-5 font-semibold text-lg bg-blue-100">Hãy cùng xem nhưng mùa trại trước nào!</button>
 			</div>
-			<div class="content-right flex-1">
-				<img class="w-full" src="https://assets-global.website-files.com/6372338e5477e047032b37a5/639727d28b6b9e726a508d5b_home%20header%20-p-1080.webp" alt="">
+			<div class="flex relative z-50 flex-col items-center gap-7">
+				<p class=" title max-md:text-[45px] text-[52px] font-bold text-center">
+					<span class="
+					hight-light-title">LTES - LET'S FLY HIGH</span> <br>
+					IS COMING IN JULLY 20
+					<span>
+					</span>
+				</p>
+				<p>Với sứ mệnh mang đến abc xyz điền text chỗ này cho dài dài nha mấy em hihi hoho</p>
+				<img width="52" height="72" src="https://uploads-ssl.webflow.com/602d59da29b66668b8758391/63a04b240b11587edcd5724c_tab-block_arrow.svg" 
+				loading="lazy" alt="" class="absolute left-[20%] top-[30%]">
+				<div class=" 
+				max-md:flex-col 
+				max-md:gap-3
+				relative flex mt-[50px] gap-7">
+					<div class="relative h-[70px] w-[250px]">
+						<div class="absolute z-10 rounded-[4px] bottom-0 left-0 border-[2px] border-white h-[90%] w-[95%]"></div>
+						<div class="btn-primary right-0 top-0 z-20 absolute h-[90%] w-[95%]">
+							<p class=" flex gap-2 text-white font-bold text-lg">
+								Khám phá ngay
+							<img src="~/assets/icon/rocket-mini.png" 
+							class="w-[30px] h-[30px]"
+							alt="">
+							</p>
+						</div>
+					</div>
+					<a href="https://www.facebook.com/traihekinang" class=" hover:bg-white 
+					hover:text-[#222236] 
+					font-semibold 
+					transition-all
+					duration-300
+					cursor-pointer mt-4 border-[2px] w-[250px] justify-center h-[52px] rounded-md flex items-center">
+						Truy cập Fanpage 
+					</a>
+				</div>
+				<div class="photo-hero-container flex">
+					<img src="~/assets/img/hero-bg.png" 
+					class=" max-md:w-full top-[0%] left-[10%]" alt="">
+				</div>
 			</div>
 		</div>
-	</div>
+	</section>
 </template>
+<script>
+import SlideBanner from './SlideBanner.vue';
+export default {
+	data(){
+		return {
+			positions: [
+			{ top: '10%', left: '20%' },
+			{ top: '20%', left: '40%' },
+			{ top: '30%', left: '50%' },
+			{ top: '40%', left: '80%' },
+			{ top: '50%', left: '90%' }
+			],
+			currentPosition: 0,
+			currentPosition2: 0
+		}
+	},
+	mounted(){
+		setTimeout(() => {
+			this.moveIcon();
+		}, 1000);
+		setInterval(this.moveIcon, 10000);
+	},
+	methods:{
+		moveIcon() {
+		let icon = document.getElementById('image');
+
+		icon.style.top = this.positions[this.currentPosition].top;
+		icon.style.left = this.positions[this.currentPosition].left;
+		this.currentPosition = (this.currentPosition + 1) % this.positions.length;
+
+	
+		}
+	}
+}
+</script>
+<style lang="scss" scoped>
+#image, #image2{
+	transition: 10s ease-in-out;
+}
+
+.hight-light-title {
+	-webkit-text-fill-color: transparent;
+	background-image: radial-gradient(circle at 0 0, #f79393, #fee4a5 38%, #9ae8b0 75%, #5ba5d0);
+	-webkit-background-clip: text;
+	background-clip: text;
+	font-weight: 800;
+}
+.btn-primary {
+	text-align: center;
+	cursor: pointer;
+	background-color: #ec7a7a;
+	background-image: linear-gradient(122deg, #fee5a5, #fea5a5 62%, #f69393 100%, #fff);
+	border-radius: 4px;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 0px;
+	text-decoration: none;
+	/* transition: opacity .3s; */
+	display: flex;
+	transform: translate(3px, -7px);
+	transition: all .3s;
+	&:hover {
+		transform: translate(-3px,0);
+	}
+}
+
+.title {
+	letter-spacing: 5px;
+}
+</style>

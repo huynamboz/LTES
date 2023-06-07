@@ -26,7 +26,19 @@
 
 @font-face {
 	font-family: Inter;
+	src: url('font/Inter-ExtraBold.ttf') format('truetype');
+	font-weight: 800;
+}
+
+@font-face {
+	font-family: Inter;
 	src: url('font/Inter-Bold.ttf') format('truetype');
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: Inter;
+	src: url('font/Inter-SemiBold.ttf') format('truetype');
 	font-weight: 600;
 }
 
@@ -64,9 +76,18 @@
 body {
     font-family: 'Inter', sans-serif ;
     font-weight: 400;
-	background-color: #0e1827;
+	/* background-color: #0e1827; */
+	background-color: #222236;
+	background-image: url(https://uploads-ssl.webflow.com/602d59da29b66668b8758391/634eaa987dced1abf6accf9f_new-home-glow-desktop-ver-top.svg);
+	/* background-position: 50% 0; */
+    background-repeat: no-repeat;
+    background-size: 2800px 8109px;
+	background-position: center;
+	/* overflow-x: hidden; */
 }
-
+.vs-input-content{
+	width: 100% !important;
+}
 p,a,div{
 	color: #ffffff;
 }
