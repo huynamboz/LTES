@@ -1,16 +1,19 @@
 <template>
 	<div class="position-relative relative">
 		<div class="bg"></div>
-		<header-top />
+		<header-top class="max-md:hidden"/>
+		<header-mobile class="max-md:flex"/>
 		<nuxt id="body" class=" pt-5"/>
 	</div>
 </template>
 <script>
 import headerTop from '~/components/layout/header/header.vue';
+import headerMobile from '~/components/layout/header/headerMobile.vue';
 export default {
 	auth: false,
 	components: {
 		headerTop,
+		headerMobile,
 	},
 }
 </script>

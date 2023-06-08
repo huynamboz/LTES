@@ -1,0 +1,39 @@
+name: SSH Login and Execute Build
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: SSH to VPS and Execute Build
+        uses: appleboy/ssh-action@master
+        env :
+            a : ${{ secrets.IP_VPS }}
+            b : $ Mona  
+            c : ${{ secrets.PASSWORD_VPS }}
+        with:
+          host: ${{ env.a }}
+          username: root
+          password: ${{ env.c }}
+          script: |
+            # Add your commands to be executed on VPS here
+            ls
+            export NVM_DIR=~/.nvm
+            source ~/.nvm/nvm.sh
+            cd LTES
+            git checkout master
+            git pull
+            npm -v
+            npm install -g yarn
+            yarn
+            yarn build
+            echo "----> build done"
+            pm2 restart ltes

@@ -1,15 +1,10 @@
 <template>
-	<div class="root w-[100vw] fixed z-[999] flex justify-center">
-		<div class=" main max-md:hidden flex justify-between items-center max-[1240px] w-full py-3 px-5 max-w-[1240px]">
-			<div class="content-left flex gap-5">
-				<img class="h-[30px]"
-					src="https://assets-global.website-files.com/6372338e5477e047032b37a5/6372be763e75b42883c24d2c_Shortcut%20Logo.svg"
-					alt="">
-				<div class="
-				max-md:hidden
+	<div class=" w-[100vw] hidden fixed z-[999] max-md:bottom-4 justify-center">
+		<div class="root hidden max-md:flex h-[52px] justify-center items-center w-[90%] rounded-3xl">
+			<div class="
 				menu-list text-sm flex gap-5 items-center">
 					<div class="menu-item">
-						<a href="#">Trang chủ</a>
+						<div @click="toHome()">Trang chủ</div>
 					</div>
 					<div class="menu-item">
 						<a href="#">Về LTES</a>
@@ -17,17 +12,10 @@
 					<div class="menu-item cursor-pointer">
 						<a href="https://www.facebook.com/traihekinang">Liên hệ</a>
 					</div>
-					<button class="bg-[#131e2f] rounded-10 py-2 px-3 border-solid border-1 border-[#2b3544]">Switch
-						now</button>
+					<button 
+					@click="active = true"
+					class="bg-[#131e2f] rounded-2xl py-2 px-3 border-solid border-1 border-[#2b3544]">Đăng nhập</button>
 				</div>
-			</div>
-			<div class="content-right">
-				<button
-				@click="active = true"
-				class="
-					text-sm
-					flex justify-center rounded-md py-2 px-2 text-white rounded-5 items-center bg-[#3a95c9]">Sign up now</button>
-			</div>
 		</div>
 
 		<vs-dialog not-close v-model="active">
