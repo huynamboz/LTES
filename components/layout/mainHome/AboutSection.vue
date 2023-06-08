@@ -1,6 +1,6 @@
 <template>
 	<div class="flex flex-col max-md:items-center gap-5 relative">
-		<p class="typewriter max-md:text-2xl text-5xl font-bold">
+		<p class=" max-md:text-2xl text-5xl font-bold">
 			LTES là gì vậy?
 		</p>
 		<div class="flex justify-between 
@@ -92,33 +92,5 @@ export default {
 		line-height: 1.5rem;
 	}
 }
-.typewriter {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  animation: 
-    typing 2.5s steps(40, end),
-    blink-caret .75s step-end infinite;
-	@media screen and (max-width: 768px) {
-		animation: 
-    typing2 2.5s steps(40, end),
-    blink-caret .75s step-end infinite;
-	}
-}
 
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 700px }
-}
-@keyframes typing2 {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange; }
-}
 </style>

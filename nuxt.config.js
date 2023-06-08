@@ -6,8 +6,8 @@ export default {
     },
 	server: {
 		port: 8000,
-		// host: '0.0.0.0'
-		host: 'localhost'
+		host: '0.0.0.0'
+		// host: 'localhost'
 		// https: {
 		//   key: fs.readFileSync(path.resolve(__dirname, 'server.key')),
 		//   cert: fs.readFileSync(path.resolve(__dirname, 'server.crt'))
