@@ -124,6 +124,9 @@ p,a,div{
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
 }
+* {
+    -webkit-tap-highlight-color: transparent;
+}
 a{
 	text-decoration: none;
 	color: unset;

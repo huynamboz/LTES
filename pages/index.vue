@@ -5,11 +5,11 @@
 				class="new-rocket desk absolute right-0 top-[10%]"> -->
 		<div class="max-w-[1240px] ">
 			<hero-home class=" px-5 mt-15"/>	
-			<slide-banner class=" max-md:w-full mt-32"/>
-			<about-section class=" px-5 max-md:w-full mt-32"/>
-			<previous-camping class=" px-5 max-md:w-full mt-32"/>
-			<section-video class=" px-5 max-md:w-full mt-32"/>
-			<section-quote class=" px-5 max-md:w-full mt-32"/>
+			<slide-banner class=" max-md:w-full mt-32 max-md:mt-5"/>
+			<about-section class=" px-5 max-md:w-full mt-32 max-md:mt-10"/>
+			<previous-camping class=" px-5 max-md:w-full mt-32 max-md:mt-10"/>
+			<section-video class=" px-5 max-md:w-full mt-32 max-md:mt-10"/>
+			<section-quote class=" px-5 max-md:w-full mt-32 max-md:mt-10"/>
 		</div>
 	</div>
 </template>

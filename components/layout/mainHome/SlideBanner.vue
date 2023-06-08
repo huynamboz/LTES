@@ -1,7 +1,7 @@
 <template>
 	<div class="container overflow-x-hidden">
 		<div class="max-w-[100vw]
-		max-[1000px]:max-w-[100vw] mt-10 h-[200px] max-md:h-[200px]">
+		max-[1000px]:max-w-[100vw] mt-10 h-[400px] max-md:h-[200px]">
 		<!-- Using the slider component -->
 		<slider ref="slider" :options="options">
 			<!-- slideritem wrapped package with the components you need -->
@@ -23,16 +23,15 @@ export default {
 				{
 					style: {
 						'background': 'url(https://i.imgur.com/hYqh9CU.png)',
-						'width': '200px',
 						'background-size': 'contain',
 						'margin-right': '20px',
 						'border-radius': '10px'
-					}
+					},
+					class: 'card1',
 				},
 				{
 					style: {
 						'background': 'url(https://i.imgur.com/Y6jua21.jpg)',
-						'width': '200px',
 						'background-size': 'contain',
 						'margin-right': '20px',
 						'border-radius': '10px'
@@ -41,7 +40,6 @@ export default {
 				{
 					style: {
 						'background': 'url(https://i.imgur.com/OAGAhv9.jpg)',
-						'width': '200px',
 						'background-size': 'cover',
 						'background-position': 'center',
 						'margin-right': '20px',
@@ -51,7 +49,24 @@ export default {
 				{
 					style: {
 						'background': 'url(https://i.imgur.com/SMoxj4d.jpg)',
-						'width': '200px',
+						'background-size': 'cover',
+						'background-position': 'center',
+						'margin-right': '20px',
+						'border-radius': '10px'
+					}
+				},
+				{
+					style: {
+						'background': 'url(https://i.imgur.com/YGJfTKp.jpg)',
+						'background-size': 'cover',
+						'background-position': 'center',
+						'margin-right': '20px',
+						'border-radius': '10px'
+					}
+				},
+				{
+					style: {
+						'background': 'url(https://i.imgur.com/rQGjQGg.jpg)',
 						'background-size': 'cover',
 						'background-position': 'center',
 						'margin-right': '20px',
@@ -61,7 +76,10 @@ export default {
 			],
 			//Slider configuration [obj]
 			options: {
-				currentPage: 0
+				currentPage: 0,
+				loop:true,
+				autoplay:1500,
+				speed: 500
 			}
 		}
 	},
@@ -71,3 +89,13 @@ export default {
 	}
 }
 </script>
+<style lang="scss" scoped>
+.slider-item{
+	width: 400px;
+	height: 400px;
+	@media screen and (max-width: 768px) {
+		width: 200px;
+		height: 200px;
+	}
+}
+</style>
