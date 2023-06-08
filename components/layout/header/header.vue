@@ -1,6 +1,23 @@
 <template>
-	<div class="root w-[100vw] flex justify-center">
-		<div class="main flex justify-between items-center max-[1240px] w-full py-3 px-5 max-w-[1240px]">
+	<div class="w-[100vw] fixed z-[999] max-md:bottom-4 flex justify-center">
+		<div class="root hidden max-md:flex h-[52px] justify-center items-center w-[90%] rounded-3xl">
+			<div class="
+				menu-list text-sm flex gap-5 items-center">
+					<div class="menu-item">
+						<div @click="toHome()">Trang chủ</div>
+					</div>
+					<div class="menu-item">
+						<a href="#">Về LTES</a>
+					</div>
+					<div class="menu-item cursor-pointer">
+						<a href="https://www.facebook.com/traihekinang">Liên hệ</a>
+					</div>
+					<button 
+					@click="active = true"
+					class="bg-[#131e2f] rounded-2xl py-2 px-3 border-solid border-1 border-[#2b3544]">Đăng nhập</button>
+				</div>
+		</div>
+		<div class=" root main max-md:hidden flex justify-between items-center max-[1240px] w-full py-3 px-5 max-w-[1240px]">
 			<div class="content-left flex gap-5">
 				<img class="h-[30px]"
 					src="https://assets-global.website-files.com/6372338e5477e047032b37a5/6372be763e75b42883c24d2c_Shortcut%20Logo.svg"
@@ -88,6 +105,13 @@ export default {
 		close() {
 			this.active = false
 		},
+		toHome(){
+			this.$router.push('/');
+			window.scrollTo({
+			top: 0,
+			behavior: 'smooth'
+		});
+		}
 	}
 }
 </script>

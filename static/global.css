@@ -77,8 +77,9 @@ body {
     font-family: 'Inter', sans-serif ;
     font-weight: 400;
 	/* background-color: #0e1827; */
-	background-color: #222236;
-	background-image: url(https://uploads-ssl.webflow.com/602d59da29b66668b8758391/634eaa987dced1abf6accf9f_new-home-glow-desktop-ver-top.svg);
+	/* background-color: #222236; */
+	background-color: #1b1b2b;
+	/* background-image: url(https://uploads-ssl.webflow.com/602d59da29b66668b8758391/634eaa987dced1abf6accf9f_new-home-glow-desktop-ver-top.svg); */
 	/* background-position: 50% 0; */
     background-repeat: no-repeat;
     background-size: 2800px 8109px;

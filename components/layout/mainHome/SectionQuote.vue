@@ -6,9 +6,9 @@
 		max-md:items-center
 		flex-wrap justify-center
 		gap-6 mt-16">
-			<profile-card :name="'Nguyễn Văn A'" :detail="'Là một mùa trại cực provip'"/>
-			<profile-card :name="'Nguyễn Văn A'" :detail="'Là một mùa trại cực provip'"/>
-			<profile-card :name="'Nguyễn Văn A'" :detail="'Là một mùa trại cực provip'"/>
+			<profile-card class="card p-4 rounded-xl" :name="'Nguyễn Văn A'" :detail="'Là một mùa trại cực provip'"/>
+			<profile-card class="card p-4 rounded-xl" :name="'Nguyễn Văn A'" :detail="'Là một mùa trại cực provip'"/>
+			<profile-card class="card p-4 rounded-xl" :name="'Nguyễn Văn A'" :detail="'Là một mùa trại cực provip'"/>
 		</div>
 	</div>
 </template>
@@ -28,5 +28,18 @@ export default {
 	-webkit-background-clip: text;
 	background-clip: text;
 	font-weight: 800;
+}
+.card{
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+	-webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    background-color: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.08);
+	&:hover{
+		box-shadow: 0px 4px 20px rgba(118, 118, 118, 0.374);
+		transform: translateY(-10px);
+		transition: all 0.3s ease-in-out;
+	}
 }
 </style>

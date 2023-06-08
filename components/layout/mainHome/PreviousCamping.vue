@@ -13,15 +13,19 @@
 				<img src="~/assets/icon/rocket-mini.png" class=" w-[30px] h-[30px]" alt="">
 			</p>
 			<div class="flex flex-col gap-20 mt-10">
-				<detail-card class="card" :title="'Trại UP 1'" :detail="'Là một mùa trại cực provip'"/>
-				<detail-card class="card" :title="'Trại UP 1'" :detail="'Là một mùa trại cực provip'"/>
+				<a href="https://www.facebook.com/traihekinang/photos/a.782481268588271/782481231921608">
+					<detail-card class="card" :img="'https://i.imgur.com/LTohiqf.png'" :year="'2017'" :title="'UP 1'" :detail="'Là một mùa trại cực provip'"/>
+				</a>
+				<detail-card class="card" :title="'UP 2'" :img="'https://i.imgur.com/Mz94N8L.jpg'" :detail="'Là một mùa trại cực provip'"/>
+				<detail-card class="card" :title="'THE OUTCASTS ACADEMY'" :className="'hight-light-title'" :year="'2023'" :img="'https://i.imgur.com/Kgk6U5B.jpg'" :detail="'Là một mùa trại cực provip'"/>
 			</div>
 		</div>
 		<div class="flex flex-col 
 		max-md:w-full 
 		gap-20 w-[40%]">
-			<detail-card class="card" :title="'Trại UP 1'" :detail="'Là một mùa trại cực provip'"/>
-			<detail-card class="card" :title="'Trại UP 1'" :detail="'Là một mùa trại cực provip'"/>
+			<detail-card class="card" :img="'https://i.imgur.com/SUmpVFW.jpg'" :title="'Trại UP 1'" :detail="'Là một mùa trại cực provip'"/>
+			<detail-card class="card" :title="'UP 4'" :year="'2020'" :img="'https://i.imgur.com/Y6jua21.jpg'" :detail="'Là một mùa trại cực provip'"/>
+			<detail-card class="card" :title="'WARRIORS WANDERLUST'" :year="'2022'" :img="'https://i.imgur.com/hYqh9CU.png'" :detail="'Là một mùa trại cực provip'"/>
 		</div>
 	</div>
 </template>
@@ -43,4 +47,5 @@ export default {
 		transform: translateY(-10px);
 		transition: all 0.3s ease-in-out;
 	}
-}</style>
+}
+</style>
