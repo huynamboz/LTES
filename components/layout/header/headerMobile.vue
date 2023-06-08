@@ -1,5 +1,5 @@
 <template>
-	<div class=" w-[100vw] hidden fixed z-[999] max-md:bottom-4 justify-center">
+	<div class=" w-[100vw] hidden fixed z-[999] max-md:top-3 justify-center">
 		<div class="root hidden max-md:flex h-[52px] justify-center items-center w-[90%] rounded-3xl">
 			<div class="
 				menu-list text-sm flex gap-5 items-center">
