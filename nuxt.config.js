@@ -15,9 +15,9 @@ export default {
 	},
 	// Global page headers: https://go.nuxtjs.dev/config-head
 	head: {
-		title: 'client',
+		title: 'LTES - Lets Fly High',
 		htmlAttrs: {
-			lang: 'en'
+			lang: 'vi'
 		},
 		meta: [
 			{ charset: 'utf-8' },
@@ -26,7 +26,7 @@ export default {
 			{ name: 'format-detection', content: 'telephone=no' }
 		],
 		link: [
-			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+			{ rel: 'icon', type: 'image/x-icon', href: '/icons/fav.png' }
 		]
 	},
 	env: {

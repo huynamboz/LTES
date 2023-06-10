@@ -31,7 +31,7 @@
 				<div class=" 
 				max-md:flex-col 
 				max-md:gap-3
-				relative flex mt-[50px] gap-7">
+				relative flex mt-[50px] gap-12">
 					<div class="relative h-[70px] w-[250px]">
 						<div class="absolute z-10 rounded-[4px] bottom-0 left-0 border-[2px] border-white h-[90%] w-[95%]"></div>
 						<div class="btn-primary right-0 top-0 z-20 absolute h-[90%] w-[95%]">
@@ -43,12 +43,13 @@
 							</p>
 						</div>
 					</div>
-					<a href="https://www.facebook.com/traihekinang" class=" hover:bg-white 
-					hover:text-[#222236] 
+					<a href="https://www.facebook.com/traihekinang" class=" bg-white 
+					text-[#222236]
+					hover:-translate-y-3 
 					font-semibold 
 					transition-all
 					duration-300
-					cursor-pointer mt-4 border-[2px] w-[250px] justify-center h-[52px] rounded-md flex items-center">
+					cursor-pointer mt-2 border-[2px] w-[250px] justify-center h-[60px] rounded-md flex items-center">
 						Truy cập Fanpage 
 					</a>
 				</div>
