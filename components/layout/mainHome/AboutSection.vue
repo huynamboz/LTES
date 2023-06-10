@@ -8,7 +8,7 @@
 		max-md:items-center
 		max-md:gap-10
 		relative">
-				<img class="absolute top-0 left-0" src="https://uploads-ssl.webflow.com/602d59da29b66668b8758391/611369747a7a9a15250c7349_new-home-stars-3.svg" loading="lazy" width="1440" height="540" alt="">
+				<img class="absolute top-0 left-0 z-[-1]" src="https://uploads-ssl.webflow.com/602d59da29b66668b8758391/611369747a7a9a15250c7349_new-home-stars-3.svg" loading="lazy" width="1440" height="540" alt="">
 				<div class="max-w-[40%]
 				max-md:max-w-full 
 				text-sm text-detail">
@@ -21,7 +21,7 @@
 			<div class="w-[50%] 
 			max-md:w-full
 			relative">
-				<img src="~/assets/img/item-color.png" class="absolute w-[100%] -top-32 right-[30%]" alt="">
+				<img src="~/assets/img/item-color.png" class="z-[-1] absolute w-[100%] -top-32 right-[30%]" alt="">
 				<div class="item-animate item-bg w-full bg-[#2c2b46] h-full border-[#f9ad99] rounded-md absolute -top-5 -left-5 z-10"></div>
 				<img src="~/assets/img/fb-page.png" alt="" class="item-animate item-img rounded-md object-contain relative z-20">
 			</div>
@@ -59,7 +59,7 @@ export default {
 	}
 }
 </script>
-<style scoped>
+<style lang="scss" scoped>
 .item-bg {
 	transform: translateY(20px);
 	opacity: 0;
