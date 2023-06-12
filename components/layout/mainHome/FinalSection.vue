@@ -1,6 +1,6 @@
 <template>
 	<section class="flex justify-center">
-		<div class="card-register w-[90%] h-[400px] max-md:h-fit max-md:py-10 p-20 rounded-xl bg-[#2b3244] relative overflow-hidden flex justify-center">
+		<div class="card-register w-[90%] h-[400px] max-md:h-fit max-md:py-10 p-20 max-md:p-10 rounded-xl bg-[#2b3244] relative overflow-hidden flex justify-center">
 			<img src="https://uploads-ssl.webflow.com/602d59da29b66668b8758391/60db7f22ede1551c05ba11bc_desk-rocket-new.svg"
 				loading="lazy" width="360" height="463" alt="Awesomic Rocket Image"
 				class="new-rocket desk absolute right-0 w-[200px] bottom-0 max-md:top-[8%] max-md:w-32 z-10">
@@ -9,7 +9,7 @@
 					<!-- <p>Còn chần chờ gì nữa</p> -->
 					<p class="text-3xl font-bold text-center">Đăng ký tham gia mùa trại <br>
 					</p>
-						<span class="hight-light-title text-4xl"> THE OUTCASTS ACADEMY 2023</span>
+						<span class="hight-light-title text-4xl max-md:text-3xl text-center"> THE OUTCASTS ACADEMY 2023</span>
 					<p>ngay thôi nào !!</p>
 				<button class="bg-[#bc52da] mt-10 px-5 py-3 rounded-3xl gap-2 flex items-center">Đăng ký ngay <i class="fi h-[18px] fi-rr-arrow-small-right"></i></button>
 
