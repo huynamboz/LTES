@@ -6,7 +6,7 @@
 			<div id="message-container" class="h-full w-full overflow-y-scroll gap-2 flex flex-col relative z-10 pb-6 px-5">
 				<div v-for="(item, index) in messages" class="flex flex-col rounded-xl"
 					:class="{ 'ml-[auto] flex flex-col items-end': item.id == user.id && item?.type != 'join', 'items-center': item?.type == 'join' }">
-					<p class="font-light" v-if="item?.type == 'join'"><b>{{ item.name }}</b> vừa tham gia phòng chat</p>
+					<p class="font-light text-xs" v-if="item?.type == 'join'"><b>{{ item.name }}</b> vừa tham gia phòng chat</p>
 					<p class="text-sm" v-if="item.role != 'admin'" :class="{ 'mr-1 hidden': item.id == user.id }">{{ item.name }}</p>
 					<p class="text-sm flex gap-1" v-else :class="{ 'mr-1 hidden': item.id == user.id }">
 						<span class="hight-light-name">Hỗ trợ: </span>
