@@ -126,6 +126,7 @@ p,a,div{
 }
 * {
     -webkit-tap-highlight-color: transparent;
+	overflow-y: overlay;
 }
 a{
 	text-decoration: none;

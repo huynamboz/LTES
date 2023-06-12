@@ -5,14 +5,15 @@
 			<p class="text-xl font-bold hight-light-title">Trò chuyện</p>
 			<div id="message-container" class="h-full w-full overflow-y-scroll gap-2 flex flex-col relative z-10 pb-6 px-5">
 				<div v-for="(item, index) in messages" class="flex flex-col rounded-xl"
-					:class="{ 'ml-[auto] flex flex-col items-end': item.id == user.id }">
+					:class="{ 'ml-[auto] flex flex-col items-end': item.id == user.id && item?.type != 'join', 'items-center': item?.type == 'join' }">
+					<p class="font-light" v-if="item?.type == 'join'"><b>{{ item.name }}</b> vừa tham gia phòng chat</p>
 					<p class="text-sm" v-if="item.role != 'admin'" :class="{ 'mr-1 hidden': item.id == user.id }">{{ item.name }}</p>
 					<p class="text-sm flex gap-1" v-else :class="{ 'mr-1 hidden': item.id == user.id }">
 						<span class="hight-light-name">Hỗ trợ: </span>
 						{{ item.name }}
 						<img src="~/assets/icon/verify.png" class="w-[18px] h-[18px]" alt="">
 					</p>
-					<p class="w-fit rounded-xl max-w-[350px] max-md:max-w-[200px] break-words"
+					<p v-if="item?.type != 'join'" class="w-fit rounded-xl max-w-[350px] max-md:max-w-[200px] break-words"
 						:class="{ ' mess-owner': item.id == user.id, ' mess-sender': item.id != user.id }">
 						{{ item.message }}
 					</p>
@@ -35,7 +36,7 @@
 			</template>
 			<input type="text" v-model="user.name" @keyup.enter ="login()" class=" bg-slate-300 w-full p-2 rounded-lg text-gray-950">
 			<template #footer>
-				<vs-button @click="login()">Đồng ý</vs-button>
+				<vs-button @click="login('JOIN')">Đồng ý</vs-button>
 			</template>
 		</vs-dialog>
 
@@ -111,7 +112,7 @@ export default {
 				console.log(error);
 			}
 		},
-		login() {
+		async login() {
 			try {
 				this.openInputName = false;
 				this.user.id = this.generateUUID();
@@ -126,6 +127,16 @@ export default {
 					this.user.role = 'user';
 				}
 				localStorage.setItem('user', JSON.stringify(this.user));
+				console.log(this.message.trim().length);
+						await push(ref(database, 'messages'), {
+						id: this.user.id,
+						name: this.user.name,
+						role: this.user.role,
+						type: 'join',
+					})
+					var container = document.getElementById("message-container");
+					//i want + 20px
+					container.scrollTop = container.scrollHeight + 20;
 				this.isLogin = true;
 			} catch (error) {
 				console.log(error);
