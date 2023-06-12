@@ -5,7 +5,11 @@
 			<!-- <div class="blur absolute w-full h-full bottom-0"></div> -->
 		</div>
 		<div class="p-3 flex flex-col gap-2">
-			<p class=" text-2xl my-3 font-medium" :class="className">{{ title }} <span class="text-sm font-light">( {{ year }} )</span></p>
+			<div class="flex items-center flex-wrap">
+				<p class=" text-2xl my-3 font-medium" :class="className">{{ title }} <span class="text-sm font-light" v-if="year.length > 0">( {{ year }} )</span>
+				</p> &nbsp;
+				<span v-if="tag" class="new-tag w-fit">Mùa hè này</span>
+			</div>
 			<p class="text-sm">is simply dummy text of the printing and typesetting industry. 
 				Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
 				when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
@@ -36,6 +40,10 @@ export default {
 		year:{
 			type:String,
 			default:""
+		},
+		tag:{
+			type:Boolean,
+			default:false
 		}
 	}
 }
@@ -55,6 +63,25 @@ background: linear-gradient(0deg, rgba(0,0,0,0.6558998599439776) 0%, rgba(253,18
 .card-item{
 	-webkit-backdrop-filter: blur(16px);
     backdrop-filter: blur(16px);
+	cursor: pointer;
     background-color: rgba(255,255,255,.08);
     border: 1px solid rgba(255,255,255,.08);
-}</style>
+	&:hover{
+		box-shadow: 0px 4px 20px rgba(118, 118, 118, 0.374);
+		transform: translateY(-10px);
+		transition: all 0.3s ease-in-out;
+	}
+}
+.new-tag {
+    bottom: 110px;
+	border-radius: 10px;
+    right: 5px;
+    background-color: #566cec;
+    background-image: linear-gradient(90deg,#4ab1f1,#566cec 25%,#d749af 75%,#ff7c51);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px;
+    letter-spacing: 4px;
+}
+</style>

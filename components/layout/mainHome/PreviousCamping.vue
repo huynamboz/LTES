@@ -12,7 +12,7 @@
 			<p class=" flex gap-4 text-2xl font-semibold max-md:mb-2 mb-5">CÁC MÙA TRẠI TRƯỚC 
 				<img src="~/assets/icon/rocket-mini.png" class=" w-[30px] h-[30px]" alt="">
 			</p>
-			<div class="flex flex-col gap-20 mt-10">
+			<div class="flex flex-col gap-20 mt-10 max-md:gap-10">
 				<a href="https://www.facebook.com/traihekinang/photos/a.782481268588271/782481231921608">
 					<detail-card class="card-previous card-previous-camp-left" :img="'https://i.imgur.com/LTohiqf.png'" :year="'2017'" :title="'UP 1'" :detail="'Là một mùa trại cực provip'"/>
 				</a>
@@ -22,10 +22,13 @@
 		</div>
 		<div class="flex flex-col 
 		max-md:w-full 
-		gap-20 w-[40%]">
+		gap-20 w-[40%]
+		max-md:gap-10">
 			<detail-card class="card-previous card-previous-camp-right" :img="'https://i.imgur.com/SUmpVFW.jpg'" :title="'Trại UP 1'" :detail="'Là một mùa trại cực provip'"/>
 			<detail-card class="card-previous card-previous-camp-right" :title="'UP 4'" :year="'2020'" :img="'https://i.imgur.com/Y6jua21.jpg'" :detail="'Là một mùa trại cực provip'"/>
-			<detail-card class="card-previous card-previous-camp-right" :title="'THE OUTCASTS ACADEMY'" :className="'hight-light-title'" :year="'2023'" :img="'https://i.imgur.com/Kgk6U5B.jpg'" :detail="'Là một mùa trại cực provip'"/>
+			<div class="relative">
+				<detail-card class=" z-20 card-previous card-previous-camp-right" :tag="true" :title="'THE OUTCASTS ACADEMY'" :className="'hight-light-title'" :year="''" :img="'https://i.imgur.com/Kgk6U5B.jpg'" :detail="'Là một mùa trại cực provip'"/>
+			</div>
 		</div>
 	</div>
 </template>
@@ -109,4 +112,5 @@ export default {
 .active-left{
 	animation: slideInFromLeft 1s ease-in-out forwards;
 }
+
 </style>

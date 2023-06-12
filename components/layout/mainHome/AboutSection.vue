@@ -1,7 +1,7 @@
 <template>
 	<div class="flex flex-col max-md:items-center gap-5 relative">
 		<p class=" max-md:text-2xl text-5xl font-bold">
-			LTES là gì vậy?
+			<span class="text-title">LTES</span> là gì vậy?
 		</p>
 		<div class="flex justify-between 
 		flex-wrap 
@@ -92,5 +92,11 @@ export default {
 		line-height: 1.5rem;
 	}
 }
-
+.text-title {
+	-webkit-text-fill-color: transparent;
+    background: -webkit-linear-gradient(45deg, #5ebbff -33%, #a174ff 69%);
+    -webkit-background-clip: text;
+    background-clip: text;
+	font-weight: 800;
+}
 </style>

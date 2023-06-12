@@ -98,4 +98,5 @@ export default {
 		height: 200px;
 	}
 }
+
 </style>
