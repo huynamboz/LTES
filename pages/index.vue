@@ -10,8 +10,8 @@
 			<hero-home class=" px-5 mt-20 max-md:mt-10"/>	
 			<slide-banner class=" max-md:w-full mt-32 max-md:mt-5"/>
 			<about-section class=" px-5 max-md:w-full mt-32 max-md:mt-10"/>
-			<!-- <previous-camping class=" px-5 max-md:w-full mt-32 max-md:mt-10"/>
-			<section-video class=" px-5 max-md:w-full mt-32 max-md:mt-10"/> -->
+			<previous-camping class=" px-5 max-md:w-full mt-32 max-md:mt-10"/>
+			<section-video class=" px-5 max-md:w-full mt-32 max-md:mt-10"/>
 			<section-quote class=" px-5 max-md:w-full mt-32 max-md:mt-10"/>
 			<benefit-section class=" px-5 max-md:w-full mt-32 max-md:mt-10"/>
 			<chat-page class=" px-5 max-md:w-full mt-32 max-md:mt-10"/>
