@@ -1,6 +1,6 @@
 <template>
-	<section class="flex justify-center">
-		<div class="card-register w-[90%] h-[400px] max-md:h-fit max-md:py-10 p-20 max-md:p-10 rounded-xl bg-[#2b3244] relative overflow-hidden flex justify-center">
+	<section class="flex  max-md:w-full justify-center">
+		<div class="card-register w-[90%]   max-md:w-full  h-[400px] max-md:h-fit max-md:py-10 p-20 max-md:p-10 rounded-xl bg-[#2b3244] relative overflow-hidden flex justify-center">
 			<img src="https://uploads-ssl.webflow.com/602d59da29b66668b8758391/60db7f22ede1551c05ba11bc_desk-rocket-new.svg"
 				loading="lazy" width="360" height="463" alt="Awesomic Rocket Image"
 				class="new-rocket desk absolute right-0 w-[200px] bottom-0 max-md:top-[8%] max-md:w-32 z-10">
