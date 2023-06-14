@@ -1,6 +1,6 @@
 <template>
 	<section class="flex max-md:w-full justify-center">
-		<div class="card-item rounded-xl w-[90%] h-[400px] max-md:h-[500px] flex flex-col p-2 items-center relative">
+		<div class="card-item rounded-xl w-[90%] max-md:w-full h-[400px] max-md:h-[500px] flex flex-col p-2 items-center relative">
 			<img src="~/assets/img/glow-new.png" class="w-full h-full absolute top-0 z-0" alt="">
 			<p class="text-xl font-bold hight-light-title">Trò chuyện</p>
 			<div id="message-container" class="h-full w-full overflow-y-scroll gap-2 flex flex-col relative z-10 pb-6 px-5">
