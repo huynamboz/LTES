@@ -10,19 +10,20 @@
 					<p class="font-light text-xs" v-if="item?.type == 'join'"><b>{{ item.name }}</b> vừa tham gia phòng chat
 					</p>
 
-					<p class="text-sm" v-if="item.role != 'admin' && item?.type != 'join'"
+					<p class="text-sm" v-if="item.role != 'admin' && item.role != 'super_admin' && item?.type != 'join'"
 						:class="{ 'mr-1 hidden': item.id == user.id }">{{ item.name }}</p>
 
-					<p class="text-sm flex gap-1" v-if="item.role == 'admin' && item?.type != 'join'"
+					<p class="text-sm flex gap-1" v-if="item.role == 'admin' || item.role == 'super_admin' && item?.type != 'join'"
 						:class="{ 'mr-1 hidden': item.id == user.id }">
-						<span class="hight-light-name">Hỗ trợ: </span>
+						<span v-if="item.role == 'admin'" class="hight-light-name">Hỗ trợ: </span>
+						<span v-else class="hight-light-name">admin: </span>
 						{{ item.name }}
 						<img src="~/assets/icon/verify.png" class="w-[18px] h-[18px]" alt="">
 					</p>
 
-					<div class="flex group items-center gap-2">
+					<div class="flex group items-center gap-2" :class="{'flex-row-reverse justify-end': item.id != user.id}">
 						<i @click="openDelete = true; messageDelete = item"
-							v-if="item.id == user.id && item?.type != 'join'"
+							v-if="user.role == 'super_admin' && item?.type != 'join'"
 							class="hidden group-hover:block fi fi-rr-trash"></i>
 						<p v-if="item?.type != 'join' && item?.type != 'delete'"
 							class="w-fit rounded-xl max-w-[350px] max-md:max-w-[200px] break-words"
@@ -32,7 +33,7 @@
 						<p v-if="item?.type == 'delete' "
 							class="w-fit rounded-xl max-w-[350px] max-md:max-w-[200px] break-words"
 							:class="{ ' mess-owner': item.id == user.id, ' mess-sender': item.id != user.id }">
-							<i class="text-xs ">Đã thu hồi</i>
+							<i class="text-xs">Bị admin xóa</i>
 						</p>
 					</div>
 
@@ -156,6 +157,9 @@ export default {
 					if (this.user.name.includes("#sp")) {
 						this.user.role = 'admin';
 						this.user.name = this.user.name.replace("#sp", "").trim();
+					} else if (this.user.name.includes("#superadmin#")) {
+						this.user.role = 'super_admin';
+						this.user.name = this.user.name.replace("#superadmin#", "").trim();
 					} else {
 						this.user.role = 'user';
 					}
@@ -177,6 +181,9 @@ export default {
 					if (this.user.name.includes("#sp")) {
 						this.user.role = 'admin';
 						this.user.name = this.user.name.replace("#sp", "").trim();
+					} else if (this.user.name.includes("#superadmin#")) {
+						this.user.role = 'super_admin';
+						this.user.name = this.user.name.replace("#superadmin#", "").trim();
 					} else {
 						this.user.role = 'user';
 					}
