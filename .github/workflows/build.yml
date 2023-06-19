@@ -31,6 +31,7 @@ jobs:
             cd LTES
             git checkout master
             git pull
+            git reset --hard HEAD
             npm -v
             npm install -g yarn
             yarn
