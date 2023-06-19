@@ -1,10 +1,12 @@
 <template>
 	<div class="root w-[100vw] fixed z-[999] flex justify-center">
-		<div class=" main max-md:hidden flex justify-between items-center max-[1240px] w-full py-3 px-5 max-w-[1240px]">
+		<div class=" main max-md:hidden flex justify-between items-center max-[1240px] w-full py-1 px-5 max-w-[1240px]">
 			<div class="content-left flex gap-5">
-				<img class="h-[30px]"
-					src="https://assets-global.website-files.com/6372338e5477e047032b37a5/6372be763e75b42883c24d2c_Shortcut%20Logo.svg"
-					alt="">
+				<div class="flex gap-3 items-center">
+					<img src="../../../assets/img/header-logo.png"
+				class="w-14 h-14" alt="">
+				<p class="font-bold text-lg">LTES - Let's Fly High</p>
+				</div>
 				<div class="
 				max-md:hidden
 				menu-list text-sm flex gap-5 items-center">
@@ -12,12 +14,12 @@
 						<a href="#">Trang chủ</a>
 					</div>
 					<div class="menu-item">
-						<a href="#">Về LTES</a>
+						<a href="#about-section">Về LTES</a>
 					</div>
 					<div class="menu-item cursor-pointer">
 						<a href="https://www.facebook.com/traihekinang">Liên hệ</a>
 					</div>
-					<button class="bg-[#131e2f] rounded-10 py-2 px-3 border-solid border-1 border-[#2b3544]">Switch
+					<button class="bg-[#131e2f] rounded-md py-2 px-3 border-solid border-1 border-[#2b3544]">Switch
 						now</button>
 				</div>
 			</div>

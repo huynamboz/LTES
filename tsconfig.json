@@ -13,14 +13,14 @@
 	  "experimentalDecorators": true,
 	  "baseUrl": ".",
 	  "paths": {
-		"~/*": [
-		  "./*"
-		],
+		"~/*": ["./*"],
+		"@assets/*": ["./assets/*"],
 	  },
 	  "types": [
 		"@nuxtjs/axios",
 	  ]
 	},
+	"include": ["/**/*"],
 	"exclude": [
 	  "node_modules",
 	  ".nuxt",

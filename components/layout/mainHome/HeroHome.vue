@@ -21,7 +21,7 @@
 				<p class=" title max-md:text-[45px] text-[52px] font-bold text-center">
 					<span class="
 					hight-light-title">LTES - LET'S FLY HIGH</span> <br>
-					IS COMING IN JULLY 20
+					IS COMING IN JULY 20
 					<span>
 					</span>
 				</p>
@@ -35,7 +35,7 @@
 					<div class="relative h-[70px] w-[250px]">
 						<div class="absolute z-10 rounded-[4px] bottom-0 left-0 border-[2px] border-white h-[90%] w-[95%]"></div>
 						<div class="btn-primary right-0 top-0 z-20 absolute h-[90%] w-[95%]">
-							<p class=" flex gap-2 text-white font-bold text-lg">
+							<p @click="goToSildeSection()" class=" flex gap-2 text-white font-bold text-lg">
 								Khám phá ngay
 							<img src="~/assets/icon/rocket-mini.png" 
 							class="w-[30px] h-[30px]"
@@ -90,8 +90,10 @@ export default {
 		icon.style.top = this.positions[this.currentPosition].top;
 		icon.style.left = this.positions[this.currentPosition].left;
 		this.currentPosition = (this.currentPosition + 1) % this.positions.length;
-
-	
+		},
+		goToSildeSection(){
+			let slideSection = document.getElementById('slide-banner');
+			slideSection.scrollIntoView({behavior: "smooth", block: "center"});
 		}
 	}
 }

@@ -2,9 +2,9 @@
 	<div class="flex w-full flex-col items-center relative overflow-hidden">
 		<img src="~/assets/img/avatar/nam.jpg" class="avatar max-md:top-[15%] top-[10%] left-[10%]" alt="">
 		<img src="~/assets/img/avatar/nhat.jpg" class="avatar top-[5%] right-[10%]" alt="">
-		<img src="~/assets/img/avatar/thu.jpg" class="avatar max-md:bottom-0 -bottom-[20%] left-[20%]" alt="">
-		<img src="~/assets/img/avatar/ngan.jpg" class="avatar max-md:top-[10%] -top-[20%] left-[50%]" alt="">
-		<img src="~/assets/img/avatar/nguyet.jpg" class="avatar max-md:bottom-0 -bottom-[20%] -right-[5%] max-md:right-0" alt="">
+		<img src="~/assets/img/avatar/thu.jpg" class="avatar max-md:bottom-[2%] bottom-[2%] left-[20%]" alt="">
+		<img src="~/assets/img/avatar/ngan.jpg" class="avatar max-md:top-[2%] top-[3%] left-[50%]" alt="">
+		<img src="~/assets/img/avatar/nguyet.jpg" class="avatar max-md:bottom-[5%] -bottom-[20%] right-[5%] max-md:right-[3%]" alt="">
 		<p>Các thành viên</p>
 		<p class="hight-light-title text-3xl font-bold">NÓI GÌ VỀ LTES</p>
 		<div class="flex max-md:flex-col
