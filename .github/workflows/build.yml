@@ -30,8 +30,8 @@ jobs:
             source ~/.nvm/nvm.sh
             cd LTES
             git checkout master
-            git pull
             git reset --hard HEAD
+            git pull
             npm -v
             npm install -g yarn
             yarn
