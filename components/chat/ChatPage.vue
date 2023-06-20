@@ -91,7 +91,7 @@
 	</section>
 </template>
 <script>
-import { database, ref, push, onValue, update } from '~/plugins/firebase.js';
+// import { database, ref, push, onValue, update } from '~/plugins/firebase.js';
 export default {
 	data() {
 		return {
@@ -110,166 +110,166 @@ export default {
 		}
 	},
 	mounted() {
-		this.getIdLocalStorage();
-		console.log(this.user);
-		this.getMessage();
-		console.log(this.messages);
-		let slideHeadPhone = new IntersectionObserver((entries, observer) => {
-			// entries : Danh sách các đối tượng chúng ta theo dỏi
-			entries.forEach(entry => {
-				// Kiểm tra ảnh của chúng ta có trong vùng nhìn thấy không
-				if (entry.isIntersecting) {
-					entry.target.scrollTop = entry.target.scrollHeight;
-				}
-			});
-		}, { rootMargin: "0px 0px -200px 0px" });
-		// nexttick
-		this.$nextTick(() => {
-			let listCard = document.getElementById("message-container");
-			slideHeadPhone.observe(listCard);
-		});
+		// this.getIdLocalStorage();
+		// console.log(this.user);
+		// this.getMessage();
+		// console.log(this.messages);
+		// let slideHeadPhone = new IntersectionObserver((entries, observer) => {
+		// 	// entries : Danh sách các đối tượng chúng ta theo dỏi
+		// 	entries.forEach(entry => {
+		// 		// Kiểm tra ảnh của chúng ta có trong vùng nhìn thấy không
+		// 		if (entry.isIntersecting) {
+		// 			entry.target.scrollTop = entry.target.scrollHeight;
+		// 		}
+		// 	});
+		// }, { rootMargin: "0px 0px -200px 0px" });
+		// // nexttick
+		// this.$nextTick(() => {
+		// 	let listCard = document.getElementById("message-container");
+		// 	slideHeadPhone.observe(listCard);
+		// });
 
 	},
 	methods: {
 		async updateMessage() {
-			try {
-				let messageRef = ref(database, 'messages');
-				this.messageDelete.type = 'delete';
-				await update(messageRef, {
-					[this.messageDelete.key]: this.messageDelete,
-				})
-					.then((res) => {
-						this.openDelete = false;
-						console.log(res,'Cập nhật tin nhắn thành công!');
-					})
-					} catch (error) {
-						this.openDelete = false;
-						console.log(error);
-					}
+			// try {
+			// 	let messageRef = ref(database, 'messages');
+			// 	this.messageDelete.type = 'delete';
+			// 	await update(messageRef, {
+			// 		[this.messageDelete.key]: this.messageDelete,
+			// 	})
+			// 		.then((res) => {
+			// 			this.openDelete = false;
+			// 			console.log(res,'Cập nhật tin nhắn thành công!');
+			// 		})
+			// 		} catch (error) {
+			// 			this.openDelete = false;
+			// 			console.log(error);
+			// 		}
 			},
 			rename() {
-				try {
-					this.openRenameName = false;
-					if (this.user.name.trim() == '') {
-						this.$toast.error('Vui lòng nhập tên');
-						return;
-					}
-					if (this.user.name.includes("#sp")) {
-						this.user.role = 'admin';
-						this.user.name = this.user.name.replace("#sp", "").trim();
-					} else if (this.user.name.includes("#superadmin#")) {
-						this.user.role = 'super_admin';
-						this.user.name = this.user.name.replace("#superadmin#", "").trim();
-					} else {
-						this.user.role = 'user';
-					}
-					localStorage.setItem('user', JSON.stringify(this.user));
-					this.isLogin = true;
-					this.openRenameName = false;
-				} catch (error) {
-					console.log(error);
-				}
+				// try {
+				// 	this.openRenameName = false;
+				// 	if (this.user.name.trim() == '') {
+				// 		this.$toast.error('Vui lòng nhập tên');
+				// 		return;
+				// 	}
+				// 	if (this.user.name.includes("#sp")) {
+				// 		this.user.role = 'admin';
+				// 		this.user.name = this.user.name.replace("#sp", "").trim();
+				// 	} else if (this.user.name.includes("#superadmin#")) {
+				// 		this.user.role = 'super_admin';
+				// 		this.user.name = this.user.name.replace("#superadmin#", "").trim();
+				// 	} else {
+				// 		this.user.role = 'user';
+				// 	}
+				// 	localStorage.setItem('user', JSON.stringify(this.user));
+				// 	this.isLogin = true;
+				// 	this.openRenameName = false;
+				// } catch (error) {
+				// 	console.log(error);
+				// }
 			},
 		async login() {
-				try {
-					this.openInputName = false;
-					this.user.id = this.generateUUID();
-					if (this.user.name.trim() == '') {
-						this.$toast.error('Vui lòng nhập tên');
-						return;
-					}
-					if (this.user.name.includes("#sp")) {
-						this.user.role = 'admin';
-						this.user.name = this.user.name.replace("#sp", "").trim();
-					} else if (this.user.name.includes("#superadmin#")) {
-						this.user.role = 'super_admin';
-						this.user.name = this.user.name.replace("#superadmin#", "").trim();
-					} else {
-						this.user.role = 'user';
-					}
-					localStorage.setItem('user', JSON.stringify(this.user));
-					console.log(this.message.trim().length);
-					await push(ref(database, 'messages'), {
-						id: this.user.id,
-						name: this.user.name,
-						role: this.user.role,
-						type: 'join',
-					})
-					var container = document.getElementById("message-container");
-					//i want + 20px
-					container.scrollTop = container.scrollHeight + 20;
-					this.isLogin = true;
-				} catch (error) {
-					console.log(error);
-				}
+				// try {
+				// 	this.openInputName = false;
+				// 	this.user.id = this.generateUUID();
+				// 	if (this.user.name.trim() == '') {
+				// 		this.$toast.error('Vui lòng nhập tên');
+				// 		return;
+				// 	}
+				// 	if (this.user.name.includes("#sp")) {
+				// 		this.user.role = 'admin';
+				// 		this.user.name = this.user.name.replace("#sp", "").trim();
+				// 	} else if (this.user.name.includes("#superadmin#")) {
+				// 		this.user.role = 'super_admin';
+				// 		this.user.name = this.user.name.replace("#superadmin#", "").trim();
+				// 	} else {
+				// 		this.user.role = 'user';
+				// 	}
+				// 	localStorage.setItem('user', JSON.stringify(this.user));
+				// 	console.log(this.message.trim().length);
+				// 	await push(ref(database, 'messages'), {
+				// 		id: this.user.id,
+				// 		name: this.user.name,
+				// 		role: this.user.role,
+				// 		type: 'join',
+				// 	})
+				// 	var container = document.getElementById("message-container");
+				// 	//i want + 20px
+				// 	container.scrollTop = container.scrollHeight + 20;
+				// 	this.isLogin = true;
+				// } catch (error) {
+				// 	console.log(error);
+				// }
 			},
 			getIdLocalStorage() {
-				try {
-					const user = localStorage.getItem('user');
-					if (!user) {
-						this.isLogin = false;
-						return;
-					} else {
-						this.isLogin = true;
-						this.user = JSON.parse(user);
-					}
-				} catch (error) {
-					console.log(error);
-				}
+				// try {
+				// 	const user = localStorage.getItem('user');
+				// 	if (!user) {
+				// 		this.isLogin = false;
+				// 		return;
+				// 	} else {
+				// 		this.isLogin = true;
+				// 		this.user = JSON.parse(user);
+				// 	}
+				// } catch (error) {
+				// 	console.log(error);
+				// }
 			},
 		async getMessage() {
-				try {
-					const messagesRef = ref(database, 'messages');
-					await onValue(messagesRef, (snapshot) => {
-						const data = snapshot.val();
-						const valuesWithKeys = Object.entries(data).map(([key, value]) => ({ key, ...value }));
-						this.messages = Object.values(valuesWithKeys);
-						console.log(this.messages);
-						this.$nextTick(() => {
-							let listCard = document.getElementById("message-container");
-							listCard.scrollTop = listCard.scrollHeight;
-						});
-					})
-				} catch (error) {
-					console.log(error);
-				}
+				// try {
+				// 	const messagesRef = ref(database, 'messages');
+				// 	await onValue(messagesRef, (snapshot) => {
+				// 		const data = snapshot.val();
+				// 		const valuesWithKeys = Object.entries(data).map(([key, value]) => ({ key, ...value }));
+				// 		this.messages = Object.values(valuesWithKeys);
+				// 		console.log(this.messages);
+				// 		this.$nextTick(() => {
+				// 			let listCard = document.getElementById("message-container");
+				// 			listCard.scrollTop = listCard.scrollHeight;
+				// 		});
+				// 	})
+				// } catch (error) {
+				// 	console.log(error);
+				// }
 			},
 			generateUUID() {
-				let d = new Date().getTime();
-				if (typeof performance !== 'undefined' && typeof performance.now === 'function') {
-					d += performance.now(); // use high-precision timer if available
-				}
-				const uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
-					const r = (d + Math.random() * 16) % 16 | 0;
-					d = Math.floor(d / 16);
-					return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
-				});
-				return uuid;
+				// let d = new Date().getTime();
+				// if (typeof performance !== 'undefined' && typeof performance.now === 'function') {
+				// 	d += performance.now(); // use high-precision timer if available
+				// }
+				// const uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+				// 	const r = (d + Math.random() * 16) % 16 | 0;
+				// 	d = Math.floor(d / 16);
+				// 	return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+				// });
+				// return uuid;
 			},
 
 		// methods
 		async sendMess() {
-				try {
-					if (this.message.trim() == '') {
-						this.$toast.error('Vui lòng nhập tin nhắn');
-						return;
-					} else {
-						console.log(await push(ref(database, 'messages'), {
-							id: this.user.id,
-							name: this.user.name,
-							message_id: this.generateUUID(),
-							role: this.user.role,
-							message: this.message.trim(),
-						}).key);
+				// try {
+				// 	if (this.message.trim() == '') {
+				// 		this.$toast.error('Vui lòng nhập tin nhắn');
+				// 		return;
+				// 	} else {
+				// 		console.log(await push(ref(database, 'messages'), {
+				// 			id: this.user.id,
+				// 			name: this.user.name,
+				// 			message_id: this.generateUUID(),
+				// 			role: this.user.role,
+				// 			message: this.message.trim(),
+				// 		}).key);
 						
-						this.message = '';
-						var container = document.getElementById("message-container");
-						//i want + 20px
-						container.scrollTop = container.scrollHeight + 20;
-					}
-				} catch (error) {
-					console.log(error);
-				}
+				// 		this.message = '';
+				// 		var container = document.getElementById("message-container");
+				// 		//i want + 20px
+				// 		container.scrollTop = container.scrollHeight + 20;
+				// 	}
+				// } catch (error) {
+				// 	console.log(error);
+				// }
 			}
 		},
 	}
