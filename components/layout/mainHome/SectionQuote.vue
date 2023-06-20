@@ -12,17 +12,19 @@
 		flex-wrap justify-center
 		gap-6 mt-16">
 			<profile-card class="card p-4 rounded-xl" :Avatar="'https://i.imgur.com/IZQRzDF.jpg'" :Name="'Nguyễn Bùi Hoàng Ngân'" :Content="'Dù mình có lớn đến cỡ nào thì LTES vẫn luôn giúp mình có lại những niềm vui của một đứa trẻ.'" :Position="'Founder'"/>
-			<profile-card class="card p-4 rounded-xl" :Avatar="'https://i.imgur.com/4fhbVaa.jpg'" :Name="'Đoàn Nguyễn Anh Thư'" :break="true" :Content="'Không eo ai chỉ LTES\nVì Anh Thư eo trong LTES\n'" :Position="'Trưởng BTC'"/>
+			<profile-card-a-t class="card p-4 rounded-xl" :Avatar="'https://i.imgur.com/4fhbVaa.jpg'" :Name="'Đoàn Nguyễn Anh Thư'" :break="true" :Content="'Không eo ai chỉ LTES\nVì Anh Thư eo trong LTES\n'" :Position="'Trưởng BTC'"/>
 			<profile-card class="card p-4 rounded-xl" :Name="'Nguyễn Văn A'" :Content="'Là một mùa trại cực provip'" :Position="'Founder'"/>
 		</div>
 	</div>
 </template>
 <script>
 import ProfileCard from '../item/ProfileCard.vue';
+import ProfileCardAT from '../item/ProfileCardAT.vue';
 export default {
 	auth: false,
 	components: {
 		ProfileCard,
+		ProfileCardAT
 	},
 }
 </script>
