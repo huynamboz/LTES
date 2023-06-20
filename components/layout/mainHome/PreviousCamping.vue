@@ -17,7 +17,7 @@
 					<detail-card class="card-previous card-previous-camp-left" :img="'https://i.imgur.com/LTohiqf.png'" :year="'2017'" :title="'UP 1'" :detail="'Là một mùa trại cực provip'"/>
 				</a>
 				<detail-card class="card-previous card-previous-camp-left" :title="'UP 2'" :img="'https://i.imgur.com/Mz94N8L.jpg'" :detail="'Là một mùa trại cực provip'"/>
-				<detail-card class="card-previous card-previous-camp-left" :title="'WARRIORS WANDERLUST'" :year="'2022'" :img="'https://i.imgur.com/hYqh9CU.png'" :detail="'Là một mùa trại cực provip'"/>
+				<detail-card class="card-previous card-previous-camp-left" :title="'WARRIORS WANDERLUST'" :year="'2022'" :img="'https://i.imgur.com/hYqh9CU.png'" :detail="'Mùa trại Warriors Wanderlust đánh dấu sự quay trở lại của LTES sau hai năm vắng bóng vì đại dịch Covid-19. Đây là trại hè hai ngày một đêm đầu tiên được LTES tổ chức tại phố cổ Hội An. Với nhiều thử thách đòi hỏi sự sáng tạo, vận dụng những kỹ năng mềm giúp các bạn trại viên khám phá được những nét đẹp văn hóa, lịch sử lâu đời tại Hội An. Bên cạnh đó, các bạn trẻ còn được tham gia những cuộc tranh biện nảy lửa, giải cứu người đội trưởng trong căn phòng bí ẩn, cũng như quẫy hết mình trong những trò teambuilding vui nhộn. Và chúng mình đã cùng nhau thắp lên ngọn lửa LTES, ngọn lửa của sự nhiệt huyết, của thanh xuân, sự sự đợi chờ suốt 5 năm của chúng mình.'"/>
 			</div>
 		</div>
 		<div class="flex flex-col 

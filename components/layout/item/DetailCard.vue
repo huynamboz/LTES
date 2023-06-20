@@ -10,9 +10,7 @@
 				</p> &nbsp;
 				<span v-if="tag" class="new-tag w-fit">Mùa hè này</span>
 			</div>
-			<p class="text-sm">is simply dummy text of the printing and typesetting industry. 
-				Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-				when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+			<p class="text-sm">{{ detail }}
 				</p>
 		</div>
 	</div>
@@ -29,7 +27,7 @@ export default {
 			type:String,
 			default:""
 		},
-		content:{
+		detail:{
 			type:String,
 			default:""
 		},

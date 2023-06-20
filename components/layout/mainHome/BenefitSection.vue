@@ -7,30 +7,36 @@
 		<div class="flex flex-col gap-5 relative">
 			<img src="~/assets/img/glow-new.png" class="w-full h-full absolute top-0" alt="">
 			<div class="bg-[#2c2b46] card-item flex p-3 rounded-md justify-start items-center gap-5">
-				<img src="~/assets/icon/tick.png" class="w-7 h-7" alt="">
-				<p>Rèn luyện khả năng teamwork</p>
+				<img src="~/assets/icon/star.png" class="w-7 h-7" alt="">
+				<p> Giấy chứng nhận tham gia trại hè.</p>
 			</div>
 
 			<div class="bg-[#2c2b46] card-item flex p-3 rounded-md justify-start items-center gap-5">
-				<img src="~/assets/icon/tick.png" class="w-7 h-7" alt="">
-				<p>Kết bạn với những bạn từ các trường khác</p>
+				<img src="~/assets/icon/star.png" class="w-7 h-7" alt="">
+				<p> Tổng giá trị giải thưởng lên đến 3 triệu đồng.</p>
 			</div>
 
 			<div class="bg-[#2c2b46] card-item flex p-3 rounded-md justify-start items-center gap-5">
-				<img src="~/assets/icon/tick.png" class="w-7 h-7" alt="">
-				<p>Nhận được sự chia sẻ kinh nghiệm từ các anh chị</p>
+				<img src="~/assets/icon/star.png" class="w-7 h-7" alt="">
+				<p>Tham gia các hoạt động thử thách sức mạnh, trí tuệ, khả năng teamwork.
+</p>
 			</div>
 
 			<div class="bg-[#2c2b46] card-item flex p-3 rounded-md justify-start items-center gap-5">
-				<img src="~/assets/icon/tick.png" class="w-7 h-7" alt="">
-				<p>Tham gia những hoạt động bổ ích</p>
+				<img src="~/assets/icon/star.png" class="w-7 h-7" alt="">
+				<p>Môi trường năng động, phù hợp để phát triển các kỹ năng mềm</p>
 			</div>
 
 			<div class="bg-[#2c2b46] card-item flex p-3 rounded-md justify-start items-center gap-5">
-				<img src="~/assets/icon/tick.png" class="w-7 h-7" alt="">
-				<p>Tham gia những hoạt động bổ ích</p>
+				<img src="~/assets/icon/star.png" class="w-7 h-7" alt="">
+				<p>Những trải nghiệm tuyệt vời, kỷ niệm sâu đậm với nhiều bạn trẻ từ <br>
+					những vùng khác nhau của Quảng Nam.</p>
 			</div>
 			
+			<div class="bg-[#2c2b46] card-item flex p-3 rounded-md justify-start items-center gap-5">
+				<img src="~/assets/icon/star.png" class="w-7 h-7" alt="">
+				<p>Đặc biệt, sẽ có một buổi hòa nhạc hóa thân, tiệc BBQ và đêm lửa trại</p>
+			</div>
 		</div>
 	</div>
 </template>

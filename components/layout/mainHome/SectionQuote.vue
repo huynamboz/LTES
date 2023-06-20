@@ -11,9 +11,9 @@
 		max-md:items-center
 		flex-wrap justify-center
 		gap-6 mt-16">
-			<profile-card class="card p-4 rounded-xl" :name="'Nguyễn Văn A'" :detail="'Là một mùa trại cực provip'"/>
-			<profile-card class="card p-4 rounded-xl" :name="'Nguyễn Văn A'" :detail="'Là một mùa trại cực provip'"/>
-			<profile-card class="card p-4 rounded-xl" :name="'Nguyễn Văn A'" :detail="'Là một mùa trại cực provip'"/>
+			<profile-card class="card p-4 rounded-xl" :Avatar="'https://i.imgur.com/IZQRzDF.jpg'" :Name="'Nguyễn Bùi Hoàng Ngân'" :Content="'Dù mình có lớn đến cỡ nào thì LTES vẫn luôn giúp mình có lại những niềm vui của một đứa trẻ.'" :Position="'Founder'"/>
+			<profile-card class="card p-4 rounded-xl" :Avatar="'https://i.imgur.com/4fhbVaa.jpg'" :Name="'Đoàn Nguyễn Anh Thư'" :break="true" :Content="'Không eo ai chỉ LTES Vì Anh Thư eo trong LTES'" :Position="'Trưởng BTC'"/>
+			<profile-card class="card p-4 rounded-xl" :Name="'Nguyễn Văn A'" :Content="'Là một mùa trại cực provip'" :Position="'Founder'"/>
 		</div>
 	</div>
 </template>

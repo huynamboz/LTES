@@ -23,13 +23,13 @@
 						now</button>
 				</div>
 			</div>
-			<div class="content-right">
+			<!-- <div class="content-right">
 				<button
 				@click="active = true"
 				class="
 					text-sm
 					flex justify-center rounded-md py-2 px-2 text-white rounded-5 items-center bg-[#3a95c9]">Sign up now</button>
-			</div>
+			</div> -->
 		</div>
 
 		<vs-dialog not-close v-model="active">

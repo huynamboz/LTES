@@ -4,7 +4,7 @@
 				loading="lazy" width="360" height="463" alt="Awesomic Rocket Image"
 				class="new-rocket desk absolute right-0 top-[10%] max-md:top-[8%] max-md:w-32">
 		<img src="https://uploads-ssl.webflow.com/602d59da29b66668b8758391/60db7f22ede1551c05ba11bc_desk-rocket-new.svg"
-		loading="lazy" width="360" height="463" alt="Awesomic Rocket Image"
+		loading="lazy" width="200" height="420" alt="Awesomic Rocket Image"
 		class="new-rocket desk absolute left-0 rotate-180 top-[40%]">
 		<div class="max-w-[1240px]  pb-10"> 
 			<hero-home class=" px-5 mt-20 max-md:mt-10"/>	

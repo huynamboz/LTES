@@ -25,7 +25,7 @@
 					<span>
 					</span>
 				</p>
-				<p>Với sứ mệnh mang đến abc xyz điền text chỗ này cho dài dài nha mấy em hihi hoho</p>
+				<p>Với sự mệnh tạo ra một trại hè kỹ năng dành cho các bạn trẻ toàn tỉnh Quảng Nam</p>
 				<img width="52" height="72" src="https://uploads-ssl.webflow.com/602d59da29b66668b8758391/63a04b240b11587edcd5724c_tab-block_arrow.svg" 
 				loading="lazy" alt="" class="absolute left-[20%] top-[30%]">
 				<div class=" 
