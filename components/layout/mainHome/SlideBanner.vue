@@ -39,7 +39,7 @@ export default {
 				},
 				{
 					style: {
-						'background': 'url(https://i.imgur.com/OAGAhv9.jpg)',
+						'background': 'url(https://i.imgur.com/GwBTxLF.jpg)',
 						'background-size': 'cover',
 						'background-position': 'center',
 						'margin-right': '20px',
@@ -66,7 +66,16 @@ export default {
 				},
 				{
 					style: {
-						'background': 'url(https://i.imgur.com/rQGjQGg.jpg)',
+						'background': 'url(https://i.imgur.com/UDfBMkr.jpg)',
+						'background-size': 'cover',
+						'background-position': 'center',
+						'margin-right': '20px',
+						'border-radius': '10px'
+					}
+				},
+				{
+					style: {
+						'background': 'url(https://i.imgur.com/pUzz55D.jpg)',
 						'background-size': 'cover',
 						'background-position': 'center',
 						'margin-right': '20px',

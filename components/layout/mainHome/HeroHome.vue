@@ -21,7 +21,7 @@
 				<p class=" title max-md:text-[45px] text-[52px] font-bold text-center">
 					<span class="
 					hight-light-title">LTES - LET'S FLY HIGH</span> <br>
-					IS COMING IN JULY 20
+					IS COMING IN JULY 28
 					<span>
 					</span>
 				</p>

@@ -1,6 +1,6 @@
 <template>
 	<div class="flex flex-col max-md:items-center gap-5 relative">
-		<p class=" max-md:text-2xl text-5xl font-bold">
+		<p class=" max-md:text-2xl text-3xl font-semibold">
 			Một chút thông tin về <span class="text-title">LTES</span>
 		</p>
 		<div class="flex justify-between 
