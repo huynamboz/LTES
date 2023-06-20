@@ -33,7 +33,7 @@ export default {
 		},
 		Avatar: {
 			type: String,
-			default: "~/assets/img/avatar-default.png",
+			default: "",
 		},
 		Content: {
 			type: String,
