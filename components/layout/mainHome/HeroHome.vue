@@ -34,8 +34,8 @@
 				relative flex mt-[50px] gap-12">
 					<div class="relative h-[70px] w-[250px]">
 						<div class="absolute z-10 rounded-[4px] bottom-0 left-0 border-[2px] border-white h-[90%] w-[95%]"></div>
-						<div class="btn-primary right-0 top-0 z-20 absolute h-[90%] w-[95%]">
-							<p @click="goToSildeSection()" class=" flex gap-2 text-white font-bold text-lg">
+						<div  @click="goToSildeSection()" class="btn-primary right-0 top-0 z-20 absolute h-[90%] w-[95%]">
+							<p class=" flex gap-2 text-white font-bold text-lg">
 								Khám phá ngay
 							<img src="~/assets/icon/rocket-mini.png" 
 							class="w-[30px] h-[30px]"
