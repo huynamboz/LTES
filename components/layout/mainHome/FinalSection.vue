@@ -15,8 +15,8 @@
 				<a class="bg-[#bc52da] mt-10 px-5 py-3 rounded-3xl gap-2 flex items-center"
 				href="https://docs.google.com/forms/d/e/1FAIpQLSfKCsIDu2l1tvlmWSLE9owZ0LCSHbV_hBsqccrMSOwGy-y-Xg/viewform" 
 				>Đăng ký ngay <i class="fi h-[18px] fi-rr-arrow-small-right"></i></a>
-				<a class=""
-				href="https://discord.gg/mxzrWeNA" 
+				<a class=" "
+				href="https://discord.gg/mxzrWeNA"
 				>Tham gia discord với chúng mình <i class="fi fi-br-link-alt"></i></a>
 				</div>
 		</div>

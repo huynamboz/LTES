@@ -28,9 +28,7 @@ export default {
 			{ hid: 'og:title', property: 'og:title', content: 'LTES - Lets Fly High' },
 			{ hid: 'og:description', property: 'og:description', content: 'LTES là tổ chức phi lợi nhuận do các bạn trẻ tại Quảng Nam thành lập và điều hành, hướng tới mục tiêu phát triển các dự án cộng đồng và rèn luyện các kĩ năng cho các học sinh trung học' },
 			{ hid: 'og:image', property: 'og:image', content: 'https://i.imgur.com/Kgk6U5B.jpg' },
-			{ hid: 'og:url', property: 'og:url', content: `https://ltesletsflyhigh.com` },
 			{ hid: 'og:site_name', property: 'og:site_name', content: 'LTES - Lets Fly High' },
-			{ hid: 'og:type', property: 'og:type', content: 'blog' }
 		],
 		link: [
 			{ rel: 'icon', type: 'image/x-icon', href: '/icons/fav.png' }
