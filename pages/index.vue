@@ -30,7 +30,7 @@ import SectionVideo from '~/components/layout/mainHome/SectionVideo.vue';
 import SectionQuote from '~/components/layout/mainHome/SectionQuote.vue';
 import BenefitSection from '~/components/layout/mainHome/BenefitSection.vue';
 import FinalSection from '~/components/layout/mainHome/FinalSection.vue';
-import ChatPage from '~/components/chat/ChatPage.vue';
+// import ChatPage from '~/components/chat/ChatPage.vue';
 import BottomFooter from '~/components/layout/footer/BottomFooter.vue';
 import TimeLine from '../components/layout/mainHome/TimeLine.vue';
 export default {
