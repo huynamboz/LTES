@@ -1,7 +1,7 @@
 <template>
 	<div class="w-full flex flex-col items-center">
 		<p class=" text-2xl font-bold">RECAP WARRIORS WANDERLUST 2022</p>
-		<div class="w-[90%] album-container cursor-zoom-in flex gap-3 max-md:gap-2 mt-10">
+		<div class="w-[90%] max-md:w-full album-container cursor-zoom-in flex gap-3 max-md:gap-2 mt-10">
 			<div class="flex flex-col gap-3  max-md:gap-2 w-[40%]">
 				<img src="https://i.imgur.com/6d2TKDL.jpg" @click="currentImg ='https://i.imgur.com/6d2TKDL.jpg'" class=" max-w-[100%] object-cover rounded-md " alt="">
 				<div class="flex gap-3 w-full">
@@ -9,16 +9,15 @@
 					<img src="https://i.imgur.com/5VyW0E0.jpg" @click="currentImg = 'https://i.imgur.com/5VyW0E0.jpg'" class=" max-w-[calc(50%-6px)] object-cover rounded-md " alt="">
 				</div>
 				<img src="https://i.imgur.com/hnRzpyK.jpg" @click="currentImg = 'https://i.imgur.com/hnRzpyK.jpg'" class=" max-w-[100%] object-cover rounded-md " alt="">
-				<img src="~/assets/img/albums/2.jpg" @click="currentImg = 'https://i.imgur.com/hnRzpyK.jpg'" class=" max-w-[100%] hidden max-md:block object-cover rounded-md " alt="">
+				<img src="https://i.imgur.com/9cYLowk.jpg" @click="currentImg = 'https://i.imgur.com/9cYLowk.jpg'" class=" max-w-[100%] hidden max-md:block object-cover rounded-md " alt="">
 			</div>
 			<div class="flex flex-col gap-3 max-md:gap-2 w-[60%]">
 				<div class="relative">
-				<img src="https://i.imgur.com/hcsdAwt.jpg" class="relative z-10 video-item w-full object-cover rounded-md " alt="">
-				<div class="video-blur z-20"></div>
+				<img src="https://i.imgur.com/hcsdAwt.jpg" @click="currentImg = 'https://i.imgur.com/hcsdAwt.jpg'" class="relative z-10 video-item w-full object-cover rounded-md " alt="">
+				<!-- <div class="video-blur z-20"></div>
 				<div @click="showVideo = true" class=" cursor-pointer absolute top-0 left-0 w-full h-full flex justify-center items-center z-30">
-				<img src="~/assets/icon/play.png" class="h-20 w-20" alt="">
-
-				</div>
+				<img src="~/assets/icon/play.png" class="h-20 w-20" alt=""> -->
+				<!-- </div> -->
 			</div>
 				<div class="flex gap-3 max-md:gap-2 w-full">
 					<img src="https://i.imgur.com/Bcr3hQF.jpg" @click="currentImg = 'https://i.imgur.com/Bcr3hQF.jpg'" class="w-[calc(50%_-_6px)] object-cover rounded-md " alt="">
@@ -33,7 +32,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="video-container  fixed top-0 left-0 flex justify-center flex-col items-center w-[100vw] h-[100vh] z-[999]" v-show="currentImg">
+		<div class="video-container  fixed top-0 left-0 flex justify-center flex-col items-center w-[100vw] h-[100vh] z-[9999]" v-show="currentImg">
 			<!-- <p class=" font-bold text-lg z-20">RECAP WARRIORS WANDERLUST 2022</p> -->
 			<img :src="currentImg" class="h-[80vh] max-md:h-[auto] max-md:w-[80vw] object-cover relative z-20 rounded-md" alt="">
 			<button class="z-20 mt-2" @click="currentImg = ''">Đóng</button>

@@ -26,7 +26,7 @@
 				<span class="text-[#f38a92]">
 					Đối tượng
 				</span><br> 
-				<span class="text-sm">Các bạn học sinh từ 14-18 tuổi trên địa bàn tỉnh Quảng Nam.</span>
+				<span class="text-sm">Các bạn học sinh từ 14 - 18 tuổi trên toàn địa bàn tỉnh Quảng Nam.</span>
 			</h2>
 		</div>
 		<div class="mt-7 flex justify-center text-center">
@@ -82,7 +82,7 @@
 					<li class="flex gap-1">
 						<span>
 						<img class="w-4 h-4 mt-1 float-left" src="~/assets/icon/star1.png" alt="">
-							Giá gốc: <span class="text-xl name-cam whitespace-nowrap">973.000 đồng</span></span></li>
+							Giá gốc: <span class="text-xl name-cam whitespace-nowrap relative"><div class="absolute w-full left-0 h-[1px] bg-white top-[12px]"></div> 973.000 đồng</span></span></li>
 					<li class="flex gap-1">
 						<img class="w-4 h-4 mt-1" src="~/assets/icon/star1.png" alt="">
 						<span>

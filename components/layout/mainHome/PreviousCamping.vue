@@ -13,10 +13,8 @@
 				<img src="~/assets/icon/rocket-mini.png" class=" w-[30px] h-[30px]" alt="">
 			</p>
 			<div class="flex flex-col gap-20 mt-10 max-md:gap-10">
-				<a href="https://www.facebook.com/traihekinang/photos/a.782481268588271/782481231921608">
-					<detail-card class="card-previous card-previous-camp-left" :img="'https://i.imgur.com/LTohiqf.png'" :year="'2017'" :title="'UP 1'" :detail="'Là một mùa trại cực provip'"/>
-				</a>
-				<detail-card class="card-previous card-previous-camp-left" :title="'UP 2'" :img="'https://i.imgur.com/Mz94N8L.jpg'" :detail="'Là một mùa trại cực provip'"/>
+				<detail-card class="card-previous card-previous-camp-left" :img="'https://i.imgur.com/LTohiqf.png'" :year="'2017'" :title="'Mùa trại UP 1'" :detail="'Trại hè UP 1 - mùa trại đầu tiên mở ra chuỗi dự án trại hè kỹ năng dành cho các bạn trẻ trên toàn địa bàn tỉnh Quảng Nam. Nguồn cảm hứng cho dự án này chính là một trại hè kỹ năng ở Singapore vào năm 2017. Với hình thức kết hợp các hoạt động học tập, rèn luyện kỹ năng cùng với các hoạt động team building, cuộc đua kỳ thú. Từ đó mà “UP 1” được nhen nhóm và ra đời. Đến với “UP 1”, các bạn không chỉ được quẩy thả ga mà còn được tham gia những hoạt động giúp khám phá những tiềm năng của bản thân và giúp trau dồi những kỹ năng cần thiết như lãnh đạo, teamwork, sáng tạo, thuyết trình,...'"/>
+				<detail-card class="card-previous card-previous-camp-left" :title="'Mùa trại UP 2'" :img="'https://i.imgur.com/Mz94N8L.jpg'" :detail="'Để mang đến luồng gió mới, LTES có một sự thay đổi địa điểm, thay vì tổ chức ở Tam Kỳ như mùa trại trước, chúng mình quyết định trải nghiệm ở Tam Xuân, Núi Thành. Đến với “UP 2”, các bạn học viên được tham gia các hoạt động trở về tuổi thơ như bắt cá, các trò chơi teambuilding để nâng cao tinh thần đồng đội. Có lẽ, chúng ta dù lớn có lớn đến cỡ nào thì cũng khao khát có lại những niềm vui tuổi thơ… Đây chính là thông điệp mà LTES muốn mang lại cho các bạn trại sinh ở mùa trại năm ấy. '"/>
 				<detail-card class="card-previous card-previous-camp-left" :title="'WARRIORS WANDERLUST'" :year="'2022'" :img="'https://i.imgur.com/hYqh9CU.png'" :detail="'Mùa trại Warriors Wanderlust đánh dấu sự quay trở lại của LTES sau hai năm vắng bóng vì đại dịch Covid-19. Đây là trại hè hai ngày một đêm đầu tiên được LTES tổ chức tại phố cổ Hội An. Với nhiều thử thách đòi hỏi sự sáng tạo, vận dụng những kỹ năng mềm giúp các bạn trại viên khám phá được những nét đẹp văn hóa, lịch sử lâu đời tại Hội An. Bên cạnh đó, các bạn trẻ còn được tham gia những cuộc tranh biện nảy lửa, giải cứu người đội trưởng trong căn phòng bí ẩn, cũng như quẫy hết mình trong những trò teambuilding vui nhộn. Và chúng mình đã cùng nhau thắp lên ngọn lửa LTES, ngọn lửa của sự nhiệt huyết, của thanh xuân, sự đợi chờ suốt 5 năm của chúng mình.'"/>
 			</div>
 		</div>
@@ -24,13 +22,11 @@
 		max-md:w-full 
 		gap-20 w-[40%]
 		max-md:gap-10">
-			<detail-card class="card-previous card-previous-camp-right" :img="'https://i.imgur.com/SUmpVFW.jpg'" :title="'Trại UP 1'" :detail="'Là một mùa trại cực provip'"/>
-			<detail-card class="card-previous card-previous-camp-right" :title="'UP 4'" :year="'2020'" :img="'https://i.imgur.com/Y6jua21.jpg'" :detail="'Là một mùa trại cực provip'"/>
-			<a href="https://www.facebook.com/traihekinang/posts/pfbid02csjUoraEetW98d8j8tNyZY5Cw1KQLR4q9REc1VNEv4LqGWyBvALkM4BVgey6Yx8hl">
+			<detail-card class="card-previous card-previous-camp-right" :img="'https://i.imgur.com/SUmpVFW.jpg'" :title="'Mùa trại UP 3'" :detail="'Sau thành công rực rỡ của hai mùa trại UP, LTES đa dạng địa điểm trải nghiệm cho trại sinh hơn. Năm này, chúng mình kết hợp cả hai hình thức: trên cạn và dưới nước. Đây có lẽ là lựa chọn mạo hiểm cho Ban Tổ chức nhưng sẽ thêm phần kịch tính trong hành trình trại'" />
+			<detail-card class="card-previous card-previous-camp-right" :title="'Mùa trại UP 4'" :year="'2020'" :img="'https://i.imgur.com/Y6jua21.jpg'" :detail="'Là một mùa trại cực provip'"/>
 				<div class="relative">
 					<detail-card class=" z-20 card-previous card-previous-camp-right" :tag="true" :title="'THE OUTCASTS ACADEMY'" :className="'hight-light-title'" :year="''" :img="'https://i.imgur.com/SMoxj4d.jpg'" :detail="'The Outcasts Academy được xây dựng để trở thành một nơi hoàn toàn hòa mình với thiên nhiên và nói không với những áp lực học hành. Đây là nơi mà mỗi học viên đều có một cá tính riêng biệt và năng lực phi thường, và đều có mong muốn thể hiện bản thân. Với những trải nghiệm độc đáo kéo dài từ lúc đăng ký nhập học đến lúc tốt nghiệp, các campers sẽ có cơ hội phát huy tối đa năng lực của bản thân và trở thành một phiên bản tốt hơn của chính mình. Mùa hè này, hãy tạm cất lại cặp sách ở góc học tập trong nhà và cùng trại hè The Outcasts Academy khám phá một cuộc sống ngoài trời đầy thú vị nha!'"/>
 				</div>
-			</a>
 		</div>
 	</div>
 </template>
