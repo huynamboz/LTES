@@ -6,7 +6,7 @@
 		</div>
 		<div class="p-3 flex flex-col gap-2">
 			<div class="flex items-center flex-wrap">
-				<p class=" text-2xl my-3 font-medium" :class="className">{{ title }} <span class="text-sm font-light" v-if="year.length > 0">( {{ year }} )</span>
+				<p class=" text-2xl my-3 font-medium" :class="className">{{ title }} <span class="text-sm font-light" v-if="year.length > 0">({{ year }})</span>
 				</p> &nbsp;
 				<span v-if="tag" class="new-tag w-fit">Mùa hè này</span>
 			</div>

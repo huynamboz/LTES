@@ -1,7 +1,8 @@
 export default {
     ssr: false,
+	target: 'static',
     router:{
-    //   base: "/e-commerce-client/dist/",
+		// base: "ltesletsflyhigh.github.io",
 		middleware: ['router-log','auth']
     },
 	server: {
