@@ -42,8 +42,6 @@ export default {
 		//make global file css from assets/css/global.css
 		"~static/global.css",
 		"~assets/css/main.css",
-		"~static/css/uicons-regular-rounded.css",
-		"~static/icons/uicons-bold-rounded.css",
 		'vue-toastification/dist/index.css',
 	],
 	auth: {
