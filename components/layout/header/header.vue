@@ -19,8 +19,8 @@
 					<div class="menu-item cursor-pointer">
 						<a href="https://www.facebook.com/traihekinang">Liên hệ</a>
 					</div>
-					<button class="bg-[#131e2f] rounded-md py-2 px-3 border-solid border-1 border-[#2b3544]">Switch
-						now</button>
+					<button @click="moreInfo()" class="bg-[#131e2f] rounded-md py-2 px-3 border-solid border-1 border-[#2b3544]">Thông tin THE OUTCASTS ACADEMY
+						</button>
 				</div>
 			</div>
 			<!-- <div class="content-right">
@@ -89,6 +89,18 @@ export default {
 		},
 		close() {
 			this.active = false
+		},
+		moreInfo(){
+			try {
+				let el = document.getElementById('time-line');
+				console.log(el);
+					el.scrollIntoView({
+					behavior: 'smooth',
+					block: 'start'
+				});
+			} catch (error) {
+				console.log(error);
+			}
 		},
 		toHome(){
 			this.$router.push('/');

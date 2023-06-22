@@ -19,13 +19,15 @@
 			</div>
 			<div class="flex relative z-50 flex-col items-center gap-7">
 				<p class=" title max-md:text-[45px] text-[52px] font-bold text-center">
-					<span class="
+					<span class="relative 
 					hight-light-title">LTES - LET'S FLY HIGH</span> <br>
-					IS COMING IN JULY 28
+					IS COMING IN JULY <span class="relative">28
+					<span class="absolute top-0 text-sm">th</span>
+					</span>
 					<span>
 					</span>
 				</p>
-				<p>Với sự mệnh tạo ra một trại hè kỹ năng dành cho các bạn trẻ toàn tỉnh Quảng Nam</p>
+				<p>Với sự mệnh tạo ra một trại hè kỹ năng dành cho các bạn trẻ toàn địa bàn tỉnh Quảng Nam</p>
 				<img width="52" height="72" src="https://uploads-ssl.webflow.com/602d59da29b66668b8758391/63a04b240b11587edcd5724c_tab-block_arrow.svg" 
 				loading="lazy" alt="" class="absolute left-[20%] top-[30%]">
 				<div class=" 
@@ -50,7 +52,7 @@
 					transition-all
 					duration-300
 					cursor-pointer mt-2 border-[2px] w-[250px] justify-center h-[60px] rounded-md flex items-center">
-						Truy cập Fanpage 
+						Truy cập Page 
 					</a>
 				</div>
 				<div class="photo-hero-container flex">
@@ -92,8 +94,12 @@ export default {
 		this.currentPosition = (this.currentPosition + 1) % this.positions.length;
 		},
 		goToSildeSection(){
-			let slideSection = document.getElementById('slide-banner');
-			slideSection.scrollIntoView({behavior: "smooth", block: "center"});
+			try {
+				let slideSection = document.getElementById('slide-banner');
+				slideSection.scrollIntoView({behavior: "smooth", block: "center"});
+			} catch (error) {
+				console.log(error);
+			}
 		}
 	}
 }

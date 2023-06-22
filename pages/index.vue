@@ -14,7 +14,8 @@
 			<section-video class=" px-5 relative z-10 max-md:w-full mt-32 max-md:mt-10"/>
 			<section-quote class="relative px-5 max-md:w-full py-32 max-md:py10"/>
 			<benefit-section class=" px-5 max-md:w-full"/>
-			<!-- <chat-page class=" px-5 max-md:w-full mt-32 max-md:mt-10"/> -->
+			<time-line id="time-line" class=" px-5 max-md:w-full mt-32 max-md:mt-10"/>
+			<chat-page class=" px-5 max-md:w-full mt-32 max-md:mt-10"/>
 			<final-section class=" px-5 max-md:w-full mt-32 max-md:mt-10"/>
 			<bottom-footer class=" px-5 max-md:w-full mt-3 max-md:mt-10"/>
 		</div>
@@ -31,6 +32,7 @@ import BenefitSection from '~/components/layout/mainHome/BenefitSection.vue';
 import FinalSection from '~/components/layout/mainHome/FinalSection.vue';
 import ChatPage from '~/components/chat/ChatPage.vue';
 import BottomFooter from '~/components/layout/footer/BottomFooter.vue';
+import TimeLine from '../components/layout/mainHome/TimeLine.vue';
 export default {
 	auth: false,
 	components: {
@@ -43,7 +45,8 @@ export default {
 		BenefitSection,
 		FinalSection,
 		ChatPage,
-		BottomFooter
+		BottomFooter,
+		TimeLine
 	},
 	data() {
 		return {

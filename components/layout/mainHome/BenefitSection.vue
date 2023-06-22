@@ -1,7 +1,7 @@
 <template>
 	<div class="flex gap-32 justify-center max-md:flex-col max-md:gap-20">
 		<div class="flex flex-col gap-20 max-md:items-center">
-			<p class="text-3xl font-semibold">Lợi ích khi tham gia <span class="hight-light-title">LTES</span></p>
+			<p class="text-3xl font-semibold">Lợi ích khi tham gia trại hè <span class="hight-light-title">LTES</span></p>
 			<img src="~/assets/img/astronau@3x.png" class="max-w-[300px] object-cover" alt="">
 		</div>
 		<div class="flex flex-col gap-5 relative">
@@ -13,30 +13,32 @@
 
 			<div class="bg-[#2c2b46] card-item flex p-3 rounded-md justify-start items-center gap-5">
 				<img src="~/assets/icon/star.png" class="w-7 h-7" alt="">
-				<p> Tổng giá trị giải thưởng lên đến 3 triệu đồng.</p>
+				<p>Phát triển các kỹ năng sống như làm việc nhóm, giao tiếp, xử lý tình huống và tư duy lãnh đạo. </p>
 			</div>
 
 			<div class="bg-[#2c2b46] card-item flex p-3 rounded-md justify-start items-center gap-5">
 				<img src="~/assets/icon/star.png" class="w-7 h-7" alt="">
-				<p>Tham gia các hoạt động thử thách sức mạnh, trí tuệ, khả năng teamwork.
+				<p>Môi trường năng động, phù hợp để rèn luyện sự tự tin và phát triển các kỹ năng mềm.
 </p>
 			</div>
 
 			<div class="bg-[#2c2b46] card-item flex p-3 rounded-md justify-start items-center gap-5">
 				<img src="~/assets/icon/star.png" class="w-7 h-7" alt="">
-				<p>Môi trường năng động, phù hợp để phát triển các kỹ năng mềm</p>
+				<p>Thăm thú những di tích và địa điểm mới lạ, trải nghiệm những hoạt động nhằm rèn luyện trí óc, sức khỏe.
+
+</p>
 			</div>
 
 			<div class="bg-[#2c2b46] card-item flex p-3 rounded-md justify-start items-center gap-5">
 				<img src="~/assets/icon/star.png" class="w-7 h-7" alt="">
-				<p>Những trải nghiệm tuyệt vời, kỷ niệm sâu đậm với nhiều bạn trẻ từ <br>
-					những vùng khác nhau của Quảng Nam.</p>
+				<p>Những mối quan hệ gắn kết và dài lâu với bạn bè đồng trang lứa cũng như các anh, chị, em có chung sở thích, chung niềm đam mê.
+</p>
 			</div>
 			
-			<div class="bg-[#2c2b46] card-item flex p-3 rounded-md justify-start items-center gap-5">
+			<!-- <div class="bg-[#2c2b46] card-item flex p-3 rounded-md justify-start items-center gap-5">
 				<img src="~/assets/icon/star.png" class="w-7 h-7" alt="">
 				<p>Đặc biệt, sẽ có một buổi hòa nhạc hóa thân, tiệc BBQ và đêm lửa trại</p>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </template>
