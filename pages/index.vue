@@ -44,7 +44,7 @@ export default {
 		SlideBanner,
 		BenefitSection,
 		FinalSection,
-		ChatPage,
+		// ChatPage,
 		BottomFooter,
 		TimeLine
 	},
