@@ -27,7 +27,7 @@
 					<span>
 					</span>
 				</p>
-				<p>Với sự mệnh tạo ra một trại hè kỹ năng dành cho các bạn trẻ toàn địa bàn tỉnh Quảng Nam</p>
+				<p>Với sự mệnh tạo ra một trại hè kỹ năng dành cho các bạn trẻ trên toàn địa bàn tỉnh Quảng Nam</p>
 				<img width="52" height="72" src="https://uploads-ssl.webflow.com/602d59da29b66668b8758391/63a04b240b11587edcd5724c_tab-block_arrow.svg" 
 				loading="lazy" alt="" class="absolute left-[20%] top-[30%]">
 				<div class=" 
