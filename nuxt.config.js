@@ -1,6 +1,5 @@
 export default {
     ssr: false,
-	target: 'static',
     router:{
 		// base: "ltesletsflyhigh.github.io",
 		middleware: ['router-log','auth']
