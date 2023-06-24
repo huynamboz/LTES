@@ -13,8 +13,8 @@
 						<a href="https://www.facebook.com/traihekinang">Liên hệ</a>
 					</div>
 					<button 
-					@click="active = true"
-					class="bg-[#131e2f] rounded-2xl py-2 px-3 border-solid border-1 border-[#2b3544]">Đăng nhập</button>
+					@click="moreInfo()"
+					class="bg-[#131e2f] rounded-2xl py-2 px-3 border-solid border-1 border-[#2b3544]">Đăng ký trại</button>
 				</div>
 		</div>
 
@@ -70,6 +70,18 @@ export default {
 		}
 	},
 	methods: {
+		moreInfo(){
+			try {
+				let el = document.getElementById('time-line');
+				console.log(el);
+					el.scrollIntoView({
+					behavior: 'smooth',
+					block: 'start'
+				});
+			} catch (error) {
+				console.log(error);
+			}
+		},
 		open() {
 			this.active = true
 		},

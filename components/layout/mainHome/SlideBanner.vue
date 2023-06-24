@@ -22,7 +22,7 @@ export default {
 			someList: [
 				{
 					style: {
-						'background': 'url(https://i.imgur.com/hYqh9CU.png)',
+						'background': 'url(https://i.imgur.com/QW6NUgp.jpg)',
 						'background-size': 'contain',
 						'margin-right': '20px',
 						'border-radius': '10px'
@@ -31,7 +31,7 @@ export default {
 				},
 				{
 					style: {
-						'background': 'url(https://i.imgur.com/Y6jua21.jpg)',
+						'background': 'url(https://i.imgur.com/q1PPbW9.png)',
 						'background-size': 'contain',
 						'margin-right': '20px',
 						'border-radius': '10px'
@@ -39,7 +39,7 @@ export default {
 				},
 				{
 					style: {
-						'background': 'url(https://i.imgur.com/GwBTxLF.jpg)',
+						'background': 'url(https://i.imgur.com/dDcSB37.png)',
 						'background-size': 'cover',
 						'background-position': 'center',
 						'margin-right': '20px',
@@ -48,7 +48,7 @@ export default {
 				},
 				{
 					style: {
-						'background': 'url(https://i.imgur.com/SMoxj4d.jpg)',
+						'background': 'url(https://i.imgur.com/hYqh9CU.png)',
 						'background-size': 'cover',
 						'background-position': 'center',
 						'margin-right': '20px',
@@ -57,7 +57,7 @@ export default {
 				},
 				{
 					style: {
-						'background': 'url(https://i.imgur.com/YGJfTKp.jpg)',
+						'background': 'url(https://i.imgur.com/ced4eV6.jpg)',
 						'background-size': 'cover',
 						'background-position': 'center',
 						'margin-right': '20px',
@@ -66,7 +66,7 @@ export default {
 				},
 				{
 					style: {
-						'background': 'url(https://i.imgur.com/UDfBMkr.jpg)',
+						'background': 'url(https://i.imgur.com/iSgd2no.jpg)',
 						'background-size': 'cover',
 						'background-position': 'center',
 						'margin-right': '20px',

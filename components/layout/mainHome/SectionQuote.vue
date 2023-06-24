@@ -13,7 +13,7 @@
 		gap-6 mt-16">
 			<profile-card class="card p-4 rounded-xl" :Avatar="'https://i.imgur.com/IZQRzDF.jpg'" :Name="'Nguyễn Bùi Hoàng Ngân'" :Content="'Dù mình có lớn đến cỡ nào thì LTES vẫn luôn giúp mình có lại những niềm vui của một đứa trẻ.'" :Position="'Founder'"/>
 			<profile-card class="card p-4 rounded-xl" :Avatar="'https://i.imgur.com/4fhbVaa.jpg'" :Name="'Đoàn Nguyễn Anh Thư'" :Content="'Bao lâu cũng vậy, LTES vẫn luôn là nhà.'" :Position="'Trưởng BTC'"/>
-			<profile-card class="card p-4 rounded-xl" :Avatar="'https://i.imgur.com/EGC05wt.png'" :Name="'Trịnh Huy Nam'" :Content="'Trại hè LTES là mùa trại tuyệt vời mà các bạn không nên bỏ lỡ, không chỉ là 1 mùa trại mà còn là nơi lưu giữ kỷ niệm thời thanh xuân cùng nữa.'" :Position="'LTES\'s Web dev '"/>
+			<profile-card class="card p-4 rounded-xl" :Avatar="'https://i.imgur.com/EGC05wt.png'" :Name="'Trịnh Huy Nam'" :Content="'Trại hè LTES là mùa trại tuyệt vời mà các bạn không nên bỏ lỡ, không chỉ là 1 mùa trại mà còn là nơi lưu giữ kỷ niệm thời thanh xuân nữa.'" :Position="'LTES\'s Web dev '"/>
 		</div>
 	</div>
 </template>
