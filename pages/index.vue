@@ -16,8 +16,18 @@
 			<benefit-section class=" px-5 max-md:w-full"/>
 			<time-line id="time-line" class=" px-5 max-md:w-full mt-32 max-md:mt-10"/>
 			<!-- <chat-page class=" px-5 max-md:w-full mt-32 max-md:mt-10"/> -->
-			<final-section class=" px-5 max-md:w-full mt-32 max-md:mt-10"/>
+			<final-section id="register" class=" px-5 max-md:w-full mt-32 max-md:mt-10"/>
 			<bottom-footer class=" px-5 max-md:w-full mt-3 max-md:mt-10"/>
+			<vs-dialog not-close not-padding v-model="showNoti">
+				<countdown />
+				<template #footer class=" bg-black">
+				<div class="con-footer bg-[#1b1b2b] flex items-center justify-center">
+					<vs-button class=" ml-auto" @click="register()" >
+					Đăng ký ngay
+					</vs-button>
+				</div>
+				</template>
+			</vs-dialog>
 		</div>
 	</div>
 </template>
@@ -33,6 +43,7 @@ import FinalSection from '~/components/layout/mainHome/FinalSection.vue';
 // import ChatPage from '~/components/chat/ChatPage.vue';
 import BottomFooter from '~/components/layout/footer/BottomFooter.vue';
 import TimeLine from '../components/layout/mainHome/TimeLine.vue';
+import Countdown from '../components/layout/item/Countdown.vue'
 export default {
 	auth: false,
 	components: {
@@ -46,13 +57,55 @@ export default {
 		FinalSection,
 		// ChatPage,
 		BottomFooter,
-		TimeLine
+		TimeLine,
+		Countdown
 	},
 	data() {
 		return {
-			// data
+			showNoti: false,
+			countdownText: "",
 		}
 	},
+	mounted(){
+		setTimeout(() => {
+			this.showNoti = true;
+		}, 2000);
+		setInterval(() => {
+			this.countDown();
+		}, 1000);
+	},
+	methods: {
+		register(){
+			try {
+				let re = document.getElementById('register');
+				re.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+				this.showNoti = false;
+			} catch (error) {
+				
+			}
+		},
+		countDown() {
+			// Kiểm tra xem thời gian còn lại đã hết chưa
+			var timeRemaining = 79200;
+			if (timeRemaining <= 0) {
+				clearInterval(timer);
+				this.countdownText = "Đếm ngược đã kết thúc.";
+			} else {
+				// Chuyển đổi thời gian còn lại thành giờ, phút và giây
+				var hours = Math.floor(timeRemaining / (1000 * 60 * 60));
+				var minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+				var seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+				// Hiển thị kết quả
+				this.countdownText = hours + ":" + minutes + ":" + seconds;
+
+				// Giảm thời gian còn lại
+				timeRemaining -= 1000;
+			}
+
+			// Gọi hàm đếm ngược mỗi giây
+		}
+	}
 	
 }
 </script>
