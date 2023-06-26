@@ -21,10 +21,11 @@
 			<vs-dialog not-close not-padding v-model="showNoti">
 				<countdown />
 				<template #footer class=" bg-black">
-				<div class="con-footer bg-[#1b1b2b] flex items-center justify-center">
-					<vs-button class=" ml-auto" @click="register()" >
+				<div class="con-footer bg-[#1b1b2b] flex items-center justify-center text-xs pb-3">
+					Nhanh tay đăng ký ngay nhé !
+					<!-- <vs-button class=" ml-auto" @click="register()" >
 					Đăng ký ngay
-					</vs-button>
+					</vs-button> -->
 				</div>
 				</template>
 			</vs-dialog>
