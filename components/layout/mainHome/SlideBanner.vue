@@ -22,7 +22,7 @@ export default {
 			someList: [
 				{
 					style: {
-						'background': 'url(https://i.imgur.com/QW6NUgp.jpg)',
+						'background': 'url(https://github.com/huynamboz/LTES/blob/master/assets/img/avatar.png%20final_11zon.jpg?raw=true)',
 						'background-size': 'contain',
 						'margin-right': '20px',
 						'border-radius': '10px'
@@ -31,7 +31,7 @@ export default {
 				},
 				{
 					style: {
-						'background': 'url(https://i.imgur.com/q1PPbW9.png)',
+						'background': 'url(https://github.com/huynamboz/LTES/blob/master/assets/img/d_11zon.jpg?raw=true)',
 						'background-size': 'contain',
 						'margin-right': '20px',
 						'border-radius': '10px'
@@ -39,7 +39,7 @@ export default {
 				},
 				{
 					style: {
-						'background': 'url(https://i.imgur.com/dDcSB37.png)',
+						'background': 'url(https://github.com/huynamboz/LTES/blob/master/assets/img/h_11zon.jpg?raw=true)',
 						'background-size': 'cover',
 						'background-position': 'center',
 						'margin-right': '20px',
@@ -48,7 +48,7 @@ export default {
 				},
 				{
 					style: {
-						'background': 'url(https://i.imgur.com/hYqh9CU.png)',
+						'background': 'url(https://github.com/huynamboz/LTES/blob/master/assets/img/mkck_11zon.jpg?raw=true)',
 						'background-size': 'cover',
 						'background-position': 'center',
 						'margin-right': '20px',
@@ -57,7 +57,7 @@ export default {
 				},
 				{
 					style: {
-						'background': 'url(https://i.imgur.com/ced4eV6.jpg)',
+						'background': 'url(https://github.com/huynamboz/LTES/blob/master/assets/img/2_11zon.jpg?raw=true)',
 						'background-size': 'cover',
 						'background-position': 'center',
 						'margin-right': '20px',
@@ -66,7 +66,7 @@ export default {
 				},
 				{
 					style: {
-						'background': 'url(https://i.imgur.com/iSgd2no.jpg)',
+						'background': 'url(https://github.com/huynamboz/LTES/blob/master/assets/img/291510301_2113491192153932_9077384783937037876_n_11zon.jpg?raw=true)',
 						'background-size': 'cover',
 						'background-position': 'center',
 						'margin-right': '20px',
@@ -75,7 +75,7 @@ export default {
 				},
 				{
 					style: {
-						'background': 'url(https://i.imgur.com/pUzz55D.jpg)',
+						'background': 'url(https://github.com/huynamboz/LTES/blob/master/assets/img/286363784_2088423411327377_8951361097011245614_n_11zon.jpg?raw=true)',
 						'background-size': 'cover',
 						'background-position': 'center',
 						'margin-right': '20px',
