@@ -146,8 +146,8 @@
 			</div>
 			<p class="text-center mt-20 text-2xl font-bold">Lịch trình & Thực Đơn</p>
 		<div class="flex gap-5 justify-center mt-5 cursor-zoom-in">
-			<img src="https://i.imgur.com/BFxj0y5.jpg" @click="currentImg = 'https://i.imgur.com/BFxj0y5.jpg'" class="w-[40%] max-md:w-[45%] rounded-xl" alt="">
-			<img src="https://i.imgur.com/wRf3o7q.jpg" @click="currentImg = 'https://i.imgur.com/wRf3o7q.jpg'" class="w-[40%] max-md:w-[45%] rounded-xl" alt="">
+			<img src="https://github.com/huynamboz/LTES/blob/master/assets/img/lichtrinh_11zon.jpg?raw=true" @click="currentImg = 'https://github.com/huynamboz/LTES/blob/master/assets/img/lichtrinh_11zon.jpg?raw=true'" class="w-[40%] max-md:w-[45%] rounded-xl" alt="">
+			<img src="https://github.com/huynamboz/LTES/blob/master/assets/img/thucdon_11zon.jpg?raw=true" @click="currentImg = 'https://github.com/huynamboz/LTES/blob/master/assets/img/thucdon_11zon.jpg?raw=true'" class="w-[40%] max-md:w-[45%] rounded-xl" alt="">
 		</div>
 		<div class="video-container  fixed top-0 left-0 flex justify-center flex-col items-center w-[100vw] h-[100vh] z-[999]" v-show="currentImg">
 			<!-- <p class=" font-bold text-lg z-20">RECAP WARRIORS WANDERLUST 2022</p> -->
