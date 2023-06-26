@@ -62,7 +62,7 @@ export default {
 			} catch (error) {
 				
 			}
-		}, 1000);
+		}, 500);
 	}
 }
 </script>
