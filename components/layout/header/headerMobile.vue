@@ -2,7 +2,7 @@
 	<div class=" w-[100vw] hidden fixed z-[999] max-md:top-3 justify-center">
 		<div class="root hidden max-md:flex h-[52px] justify-center items-center w-[90%] rounded-3xl">
 			<div class="
-				menu-list text-sm flex gap-5 items-center">
+				menu-list text-sm flex gap-5 items-center max-[355px]:text-xs">
 					<div class="menu-item">
 						<div @click="toHome()">Trang chủ</div>
 					</div>
@@ -14,7 +14,7 @@
 					</div>
 					<button 
 					@click="moreInfo()"
-					class="bg-[#131e2f] rounded-2xl py-2 px-3 border-solid border-1 border-[#2b3544]">Đăng ký trại</button>
+					class="bg-[#131e2f] rounded-2xl py-2 px-3 border-solid border-1 border-[#2b3544]">Đăng ký</button>
 				</div>
 		</div>
 

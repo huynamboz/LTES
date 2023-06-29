@@ -73,7 +73,7 @@ export default {
 			{ top: '20%', left: '40%' },
 			{ top: '30%', left: '50%' },
 			{ top: '40%', left: '80%' },
-			{ top: '50%', left: '90%' }
+			{ top: '50%', left: '85%' }
 			],
 			currentPosition: 0,
 			currentPosition2: 0
