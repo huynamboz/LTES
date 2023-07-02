@@ -16,7 +16,7 @@
 				href="https://docs.google.com/forms/d/e/1FAIpQLSfKCsIDu2l1tvlmWSLE9owZ0LCSHbV_hBsqccrMSOwGy-y-Xg/viewform" 
 				>Đăng ký ngay <i class="fi h-[18px] fi-rr-arrow-small-right"></i></a>
 				<a class=" "
-				href="https://discord.gg/mxzrWeNA"
+				href="https://discord.gg/Q6uQfHN9xa"
 				>Tham gia discord với chúng mình <i class="fi fi-br-link-alt"></i></a>
 				</div>
 		</div>
