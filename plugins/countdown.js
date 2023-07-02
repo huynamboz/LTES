@@ -1,4 +1,4 @@
-const countdown = new Date('2023-06-27').setHours(23, 59, 0, 0);;
+const countdown = new Date('2023-07-9').setHours(23, 59, 0, 0);;
 
 
 

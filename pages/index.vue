@@ -68,12 +68,12 @@ export default {
 		}
 	},
 	mounted(){
-		// setTimeout(() => {
-		// 	this.showNoti = true;
-		// }, 2000);
-		// setInterval(() => {
-		// 	this.countDown();
-		// }, 1000);
+		setTimeout(() => {
+			this.showNoti = true;
+		}, 2000);
+		setInterval(() => {
+			this.countDown();
+		}, 1000);
 	},
 	methods: {
 		register(){
