@@ -36,9 +36,9 @@
 				relative flex mt-[50px] gap-12">
 					<div class="relative h-[70px] w-[250px]">
 						<div class="absolute z-10 rounded-[4px] bottom-0 left-0 border-[2px] border-white h-[90%] w-[95%]"></div>
-						<div  @click="goToSildeSection()" class="btn-primary right-0 top-0 z-20 absolute h-[90%] w-[95%]">
+						<div  @click="$router.push('/result-apply')" class="btn-primary right-0 top-0 z-20 absolute h-[90%] w-[95%]">
 							<p class=" flex gap-2 text-white font-bold text-lg">
-								Khám phá ngay
+								Kết quả ứng tuyển
 							<img src="~/assets/icon/rocket-mini.png" 
 							class="w-[30px] h-[30px]"
 							alt="">
@@ -85,13 +85,20 @@ export default {
 		}, 1000);
 		setInterval(this.moveIcon, 10000);
 	},
+	beforeDestroy(){
+		clearInterval(this.moveIcon);
+	},
 	methods:{
 		moveIcon() {
-		let icon = document.getElementById('image');
+		try {
+			let icon = document.getElementById('image');
 
-		icon.style.top = this.positions[this.currentPosition].top;
-		icon.style.left = this.positions[this.currentPosition].left;
-		this.currentPosition = (this.currentPosition + 1) % this.positions.length;
+			icon.style.top = this.positions[this.currentPosition].top;
+			icon.style.left = this.positions[this.currentPosition].left;
+			this.currentPosition = (this.currentPosition + 1) % this.positions.length;
+		} catch (error) {
+			console.log(error);
+		}
 		},
 		goToSildeSection(){
 			try {

@@ -2,7 +2,7 @@
 	<div class="root w-[100vw] fixed z-[999] flex justify-center">
 		<div class=" main max-md:hidden flex justify-between items-center max-[1240px] w-full py-1 px-5 max-w-[1240px]">
 			<div class="content-left flex gap-5">
-				<div class="flex gap-3 items-center">
+				<div class="flex gap-3 items-center cursor-pointer" @click="$router.push('/')">
 					<img src="../../../assets/img/header-logo.png"
 				class="w-14 h-14" alt="">
 				<p class="font-bold text-lg">LTES - Let's Fly High</p>
@@ -11,7 +11,7 @@
 				max-md:hidden
 				menu-list text-sm flex gap-5 items-center">
 					<div class="menu-item">
-						<a href="#">Trang chủ</a>
+						<a href="/">Trang chủ</a>
 					</div>
 					<div class="menu-item">
 						<a href="#about-section">Về LTES</a>
@@ -90,7 +90,8 @@ export default {
 		close() {
 			this.active = false
 		},
-		moreInfo(){
+		async moreInfo(){
+			await this.$router.push('/');
 			try {
 				let el = document.getElementById('time-line');
 				console.log(el);
