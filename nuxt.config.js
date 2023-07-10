@@ -97,8 +97,12 @@ export default {
 	buildModules: [
 		['@nuxtjs/dotenv'],
 		'@nuxtjs/tailwindcss',
+		'@nuxtjs/google-analytics'
 	],
-
+	googleAnalytics: {
+		// Options
+		id: 'G-LVBFTVJ0F6'
+	  },
 	// Modules: https://go.nuxtjs.dev/config-modules
 	modules: [
 		'@nuxtjs/axios',
