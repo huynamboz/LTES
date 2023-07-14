@@ -114,7 +114,9 @@
 						<br> Chúc bạn có những trải nghiệm thật thú vị tại trại hè nhé.
 					</p>
 					<p class="text-gray-800">
-						Chúng mình sẽ gửi email cho bạn vào địa chỉ <b>{{ data.email }}</b> để xác nhận thông tin và hướng dẫn các bước tiếp theo.
+						Chúng mình sẽ gửi email cho bạn vào địa chỉ <b>{{ data.email }}</b> để xác 
+						nhận thông tin và hướng dẫn các bước tiếp theo sau khi có thông báo chính thức trên fanpage
+						LTES - Let's Fly High nha.
 						<br> Và đừng quên tham gia discord của tụi mình tại <a href="https://discord.gg/Q6uQfHN9xa" target="_blank" class="text-blue-500">đây</a> nhé
 					</p>
 				</div>
