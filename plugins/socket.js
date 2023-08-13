@@ -1,3 +1,3 @@
 import io from 'socket.io-client'
-const socket = io('http://localhost:8081')
+const socket = io(process.env.SOCKETIO_URL)
 export default socket

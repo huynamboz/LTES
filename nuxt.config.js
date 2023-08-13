@@ -2,6 +2,7 @@ require('dotenv').config()
 export default {
 	publicRuntimeConfig: {
 		ID_ADMIN: process.env.ID_ADMIN,
+		SOCKETIO_URL: process.env.SOCKETIO_URL,
 	  },
     ssr: false,
     router:{
