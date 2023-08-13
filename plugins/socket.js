@@ -1,3 +1,3 @@
 import io from 'socket.io-client'
-const socket = io(process.env.SOCKETIO_URL)
+const socket = io.connect(process.env.SOCKETIO_URL, {secure: true})
 export default socket
