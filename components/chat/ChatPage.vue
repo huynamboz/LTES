@@ -163,7 +163,7 @@ export default {
 		...mapActions(['initSocket']),
 		async updateMessage() {
 			try {
-				this.$axios.delete('http://localhost:3009/messages/'+ this.messageDelete.id)
+				this.$axios.delete('https://ltesletsflyhigh.com/messages/'+ this.messageDelete.id)
 				.then((res) => {
 					this.openDelete = false;
 				})
@@ -213,7 +213,7 @@ export default {
 					this.user.role = 'user';
 				}
 				localStorage.setItem('user', JSON.stringify(this.user));
-				this.$axios.post('http://localhost:3009/messages', {
+				this.$axios.post('https://ltesletsflyhigh.com/messages', {
 					user_id: this.user.id,
 					name: this.user.name,
 					role: this.user.role,
@@ -249,7 +249,7 @@ export default {
 		},
 		async getMessage() {
 			try {
-				await this.$axios.get('http://localhost:3009/messages').then((res) => {
+				await this.$axios.get('https://ltesletsflyhigh.com/messages').then((res) => {
 					this.messages = res.data.data;
 					this.$nextTick(() => {
 						let listCard = document.getElementById("message-container");
@@ -280,7 +280,7 @@ export default {
 					this.$toast.error('Vui lòng nhập tin nhắn');
 					return;
 				} else {
-					this.$axios.post('http://localhost:3009/messages', {
+					this.$axios.post('https://ltesletsflyhigh.com/messages', {
 						user_id: this.user.id,
 						name: this.user.name,
 						role: this.user.role,
