@@ -1,44 +1,48 @@
 <template>
-	<section class="flex max-md:w-full justify-center">
-		<div class="card-item rounded-xl w-[90%] max-md:w-full h-[400px] max-md:h-[500px] flex flex-col p-2 items-center relative">
+	<section class="flex w-full h-full justify-center">
+		<div
+			class="card-item rounded-xl w-[90%] max-md:w-full h-[400px] max-md:h-[500px] flex flex-col p-2 items-center relative">
 			<img src="~/assets/img/glow-new.png" class="w-full h-full absolute top-0 z-0" alt="">
 			<p class="text-xl font-bold hight-light-title">Trò chuyện</p>
 			<div id="message-container" class="h-full w-full overflow-y-scroll gap-2 flex flex-col relative z-10 pb-6 px-5">
 				<div v-for="(item, index) in messages" class="flex flex-col rounded-xl"
-					:class="{ 'ml-[auto] flex flex-col items-end': item.id == user.id && item?.type != 'join', 'items-center': item?.type == 'join' }">
+					:class="{ 'ml-[auto] flex flex-col items-end': item.user_id == user.id && item?.type != 'join', 'items-center': item?.type == 'join' }">
 
 					<p class="font-light text-xs" v-if="item?.type == 'join'"><b>{{ item.name }}</b> vừa tham gia phòng chat
 					</p>
 
-					<p class="text-sm" v-if="item.role != 'admin' && item.role != 'super_admin' && item?.type != 'join'"
-						:class="{ 'mr-1 hidden': item.id == user.id }">{{ item.name }}</p>
+					<p class="text-sm" v-if="item.role != 'admin' && item.role != $config.ID_ADMIN && item?.type != 'join'"
+						:class="{ 'mr-1 hidden': item.user_id == user.id }">{{ item.name }}</p>
 
-					<p class="text-sm flex gap-1" v-if="item.role == 'admin' || item.role == 'super_admin' && item?.type != 'join'"
-						:class="{ 'mr-1 hidden': item.id == user.id }">
+					<p class="text-sm flex gap-1"
+						v-if="item.role == 'admin' || item.role == $config.ID_ADMIN && item?.type != 'join'"
+						:class="{ 'mr-1 hidden': item.user_id == user.id }">
 						<span v-if="item.role == 'admin'" class="hight-light-name">Hỗ trợ: </span>
 						<span v-else class="hight-light-name">admin: </span>
 						{{ item.name }}
 						<img src="~/assets/icon/verify.png" class="w-[18px] h-[18px]" alt="">
 					</p>
 
-					<div class="flex group items-center gap-2" :class="{'flex-row-reverse justify-end': item.id != user.id}">
+					<div class="flex group items-center gap-2"
+						:class="{ 'flex-row-reverse justify-end': item.user_id != user.id }">
 						<i @click="openDelete = true; messageDelete = item"
-							v-if="user.role == 'super_admin' && item?.type != 'join'"
+							v-if="user.role == $config.ID_ADMIN && item?.type != 'join'"
 							class="hidden group-hover:block fi fi-rr-trash"></i>
 						<p v-if="item?.type != 'join' && item?.type != 'delete'"
-							class="w-fit rounded-xl max-w-[350px] max-md:max-w-[200px] break-words"
-							:class="{ ' mess-owner': item.id == user.id, ' mess-sender': item.id != user.id }">
+							class="w-fit text-sm rounded-xl max-w-[350px] max-md:max-w-[200px] break-words"
+							:class="{ ' mess-owner': item.user_id == user.id, ' mess-sender': item.user_id != user.id }">
 							{{ item.message }}
 						</p>
-						<p v-if="item?.type == 'delete' "
+						<p v-if="item?.type == 'delete'"
 							class="w-fit rounded-xl max-w-[350px] max-md:max-w-[200px] break-words"
-							:class="{ ' mess-owner': item.id == user.id, ' mess-sender': item.id != user.id }">
+							:class="{ ' mess-owner': item.user_id == user.id, ' mess-sender': item.user_id != user.id }">
 							<i class="text-xs">Bị admin xóa</i>
 						</p>
 					</div>
 
 				</div>
 			</div>
+			<div class="absolute bottom-14 text-sm " v-if="unread">Tin nhắn chưa đọc <i class="fi fi-rr-arrow-down"></i></div>
 			<div class="flex gap-5 w-full relative z-10 px-2 justify-center">
 				<img v-if="isLogin" src="~/assets/icon/edit.png" class="w-[20px] object-contain"
 					@click="openRenameName = true" alt="">
@@ -47,7 +51,7 @@
 						placeholder="tin nhắn...." class=" bg-transparent w-full">
 				</div>
 				<button v-if="isLogin" @click="sendMess()" class="mr-2">Gửi</button>
-				<div v-else class="bg-[rgba(255,255,255,.08)] py-2 px-3 rounded-xl" @click="openInputName = true"> Nhập tên
+				<div v-else class="bg-[rgba(255,255,255,.08)] py-2 px-3 rounded-xl cursor-pointer" @click="openInputName = true"> Nhập tên
 					để trò chuyện nào</div>
 			</div>
 		</div>
@@ -91,13 +95,39 @@
 	</section>
 </template>
 <script>
-import { database, ref, push, onValue, update } from '~/plugins/firebase.js';
+import { mapState, mapActions } from 'vuex';
 export default {
+	computed: {
+		...mapState(['message_store']), // Kết nối state `message_store` từ Vuex store vào component
+	},
+	watch: {
+		message_store(newValue, oldValue) {
+			switch (newValue.type) {
+				case 'delete':
+					const index = this.messages.findIndex((item) => item.id == newValue.id);
+					this.messages[index].type = 'delete';
+					break;
+				case 'join':
+				case 'send':
+					this.messages.push(newValue);
+					break;
+				default:
+					break;
+			}
+			this.$nextTick(() => {
+				let listCard = document.getElementById("message-container");
+				if (this.checkBottom(listCard)) {
+					listCard.scrollTop = listCard.scrollHeight;
+				}
+			});
+		},
+	},
 	data() {
 		return {
 			messages: [],
 			message: '',
 			openRenameName: false,
+			unread: false,
 			user: {
 				name: '',
 				id: '',
@@ -110,10 +140,9 @@ export default {
 		}
 	},
 	mounted() {
+		this.initSocket();
 		this.getIdLocalStorage();
-		console.log(this.user);
 		this.getMessage();
-		console.log(this.messages);
 		let slideHeadPhone = new IntersectionObserver((entries, observer) => {
 			// entries : Danh sách các đối tượng chúng ta theo dỏi
 			entries.forEach(entry => {
@@ -131,148 +160,143 @@ export default {
 
 	},
 	methods: {
+		...mapActions(['initSocket']),
 		async updateMessage() {
 			try {
-				let messageRef = ref(database, 'messages');
-				this.messageDelete.type = 'delete';
-				await update(messageRef, {
-					[this.messageDelete.key]: this.messageDelete,
+				this.$axios.delete('http://localhost:3009/messages/'+ this.messageDelete.id)
+				.then((res) => {
+					this.openDelete = false;
 				})
-					.then((res) => {
-						this.openDelete = false;
-						console.log(res,'Cập nhật tin nhắn thành công!');
-					})
-					} catch (error) {
-						this.openDelete = false;
-						console.log(error);
-					}
-			},
-			rename() {
-				try {
-					this.openRenameName = false;
-					if (this.user.name.trim() == '') {
-						this.$toast.error('Vui lòng nhập tên');
-						return;
-					}
-					if (this.user.name.includes("#sp")) {
-						this.user.role = 'admin';
-						this.user.name = this.user.name.replace("#sp", "").trim();
-					} else if (this.user.name.includes("#superadmin#")) {
-						this.user.role = 'super_admin';
-						this.user.name = this.user.name.replace("#superadmin#", "").trim();
-					} else {
-						this.user.role = 'user';
-					}
-					localStorage.setItem('user', JSON.stringify(this.user));
-					this.isLogin = true;
-					this.openRenameName = false;
-				} catch (error) {
-					console.log(error);
+			} catch (error) {
+				this.openDelete = false;
+				console.log(error);
+			}
+		},
+		rename() {
+			try {
+				this.openRenameName = false;
+				if (this.user.name.trim() == '') {
+					this.$toast.error('Vui lòng nhập tên');
+					return;
 				}
-			},
+				if (this.user.name.includes("#sp")) {
+					this.user.role = 'admin';
+					this.user.name = this.user.name.replace("#sp", "").trim();
+				} else if (this.user.name.includes(`#${this.$config.ID_ADMIN}#`)) {
+					this.user.role = this.$config.ID_ADMIN;
+					this.user.name = this.user.name.replace(`#${this.$config.ID_ADMIN}#`, "").trim();
+				} else {
+					this.user.role = 'user';
+				}
+				localStorage.setItem('user', JSON.stringify(this.user));
+				this.isLogin = true;
+				this.openRenameName = false;
+			} catch (error) {
+				console.log(error);
+			}
+		},
 		async login() {
-				try {
-					this.openInputName = false;
-					this.user.id = this.generateUUID();
-					if (this.user.name.trim() == '') {
-						this.$toast.error('Vui lòng nhập tên');
-						return;
-					}
-					if (this.user.name.includes("#sp")) {
-						this.user.role = 'admin';
-						this.user.name = this.user.name.replace("#sp", "").trim();
-					} else if (this.user.name.includes("#superadmin#")) {
-						this.user.role = 'super_admin';
-						this.user.name = this.user.name.replace("#superadmin#", "").trim();
-					} else {
-						this.user.role = 'user';
-					}
-					localStorage.setItem('user', JSON.stringify(this.user));
-					console.log(this.message.trim().length);
-					await push(ref(database, 'messages'), {
-						id: this.user.id,
-						name: this.user.name,
-						role: this.user.role,
-						type: 'join',
-					})
-					var container = document.getElementById("message-container");
-					//i want + 20px
-					container.scrollTop = container.scrollHeight + 20;
+			try {
+				this.openInputName = false;
+				this.user.id = this.generateUUID();
+				if (this.user.name.trim() == '') {
+					this.$toast.error('Vui lòng nhập tên');
+					return;
+				}
+				if (this.user.name.includes("#sp")) {
+					this.user.role = 'admin';
+					this.user.name = this.user.name.replace("#sp", "").trim();
+				} else if (this.user.name.includes(`#${this.$config.ID_ADMIN}#`)) {
+					this.user.role = this.$config.ID_ADMIN;
+					this.user.name = this.user.name.replace(`#${this.$config.ID_ADMIN}#`, "").trim();
+				} else {
+					this.user.role = 'user';
+				}
+				localStorage.setItem('user', JSON.stringify(this.user));
+				this.$axios.post('http://localhost:3009/messages', {
+					user_id: this.user.id,
+					name: this.user.name,
+					role: this.user.role,
+					type: 'join',
+				})
+				var container = document.getElementById("message-container");
+				container.scrollTop = container.scrollHeight + 20;
+				this.isLogin = true;
+			} catch (error) {
+				console.log(error);
+			}
+		},
+		getIdLocalStorage() {
+			try {
+				const user = localStorage.getItem('user');
+				if (!user) {
+					this.isLogin = false;
+					return;
+				} else {
 					this.isLogin = true;
-				} catch (error) {
-					console.log(error);
+					this.user = JSON.parse(user);
 				}
-			},
-			getIdLocalStorage() {
-				try {
-					const user = localStorage.getItem('user');
-					if (!user) {
-						this.isLogin = false;
-						return;
-					} else {
-						this.isLogin = true;
-						this.user = JSON.parse(user);
-					}
-				} catch (error) {
-					console.log(error);
-				}
-			},
+			} catch (error) {
+				console.log(error);
+			}
+		},
+		checkBottom(el) {
+			if (el.scrollTop + el.clientHeight + 200 >= el.scrollHeight) {
+				return true;
+			} else {
+				return false;
+			}
+		},
 		async getMessage() {
-				try {
-					const messagesRef = ref(database, 'messages');
-					await onValue(messagesRef, (snapshot) => {
-						const data = snapshot.val();
-						const valuesWithKeys = Object.entries(data).map(([key, value]) => ({ key, ...value }));
-						this.messages = Object.values(valuesWithKeys);
-						console.log(this.messages);
-						this.$nextTick(() => {
-							let listCard = document.getElementById("message-container");
-							listCard.scrollTop = listCard.scrollHeight;
-						});
-					})
-				} catch (error) {
-					console.log(error);
-				}
-			},
-			generateUUID() {
-				let d = new Date().getTime();
-				if (typeof performance !== 'undefined' && typeof performance.now === 'function') {
-					d += performance.now(); // use high-precision timer if available
-				}
-				const uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
-					const r = (d + Math.random() * 16) % 16 | 0;
-					d = Math.floor(d / 16);
-					return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
-				});
-				return uuid;
-			},
+			try {
+				await this.$axios.get('http://localhost:3009/messages').then((res) => {
+					this.messages = res.data.data;
+					this.$nextTick(() => {
+						let listCard = document.getElementById("message-container");
+						listCard.scrollTop = listCard.scrollHeight;
+					});
+				})
+			} catch (error) {
+				console.log(error);
+			}
+		},
+		generateUUID() {
+			let d = new Date().getTime();
+			if (typeof performance !== 'undefined' && typeof performance.now === 'function') {
+				d += performance.now(); // use high-precision timer if available
+			}
+			const uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+				const r = (d + Math.random() * 16) % 16 | 0;
+				d = Math.floor(d / 16);
+				return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+			});
+			return uuid;
+		},
 
 		// methods
 		async sendMess() {
-				try {
-					if (this.message.trim() == '') {
-						this.$toast.error('Vui lòng nhập tin nhắn');
-						return;
-					} else {
-						console.log(await push(ref(database, 'messages'), {
-							id: this.user.id,
-							name: this.user.name,
-							message_id: this.generateUUID(),
-							role: this.user.role,
-							message: this.message.trim(),
-						}).key);
-						
-						this.message = '';
-						var container = document.getElementById("message-container");
-						//i want + 20px
-						container.scrollTop = container.scrollHeight + 20;
-					}
-				} catch (error) {
-					console.log(error);
+			try {
+				if (this.message.trim() == '') {
+					this.$toast.error('Vui lòng nhập tin nhắn');
+					return;
+				} else {
+					this.$axios.post('http://localhost:3009/messages', {
+						user_id: this.user.id,
+						name: this.user.name,
+						role: this.user.role,
+						message: this.message.trim(),
+						type: 'send',
+					})
+					this.message = '';
+					var container = document.getElementById("message-container");
+					container.scrollTop = container.scrollHeight + 20;
 				}
+			} catch (error) {
+				console.log(error);
 			}
-		},
-	}
+		}
+	},
+}
 </script>
 <style lang="scss" scoped>
 @import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
@@ -280,7 +304,6 @@ export default {
 .card-item {
 	-webkit-backdrop-filter: blur(16px);
 	backdrop-filter: blur(16px);
-	cursor: pointer;
 	background-color: rgba(255, 255, 255, .08);
 	border: 1px solid rgba(255, 255, 255, .08);
 	// &:hover{

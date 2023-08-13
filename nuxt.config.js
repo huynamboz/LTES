@@ -1,4 +1,8 @@
+require('dotenv').config()
 export default {
+	publicRuntimeConfig: {
+		ID_ADMIN: process.env.ID_ADMIN,
+	  },
     ssr: false,
     router:{
 		// base: "ltesletsflyhigh.github.io",
@@ -95,7 +99,6 @@ export default {
 
 	// Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
 	buildModules: [
-		['@nuxtjs/dotenv'],
 		'@nuxtjs/tailwindcss',
 		'@nuxtjs/google-analytics'
 	],
@@ -106,6 +109,7 @@ export default {
 	// Modules: https://go.nuxtjs.dev/config-modules
 	modules: [
 		'@nuxtjs/axios',
+		'@nuxtjs/dotenv',
 		'@nuxtjs/auth-next',
 	],
 

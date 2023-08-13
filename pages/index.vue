@@ -30,6 +30,7 @@
 				</template>
 			</vs-dialog>
 		</div>
+		<chat-popup />
 	</div>
 </template>
 <script>
@@ -45,6 +46,7 @@ import FinalSection from '~/components/layout/mainHome/FinalSection.vue';
 import BottomFooter from '~/components/layout/footer/BottomFooter.vue';
 import TimeLine from '../components/layout/mainHome/TimeLine.vue';
 import Countdown from '../components/layout/item/Countdown.vue'
+import ChatPopup from '../components/chat/ChatPopup.vue';
 export default {
 	auth: false,
 	components: {
@@ -59,7 +61,8 @@ export default {
 		// ChatPage,
 		BottomFooter,
 		TimeLine,
-		Countdown
+		Countdown,
+		ChatPopup
 	},
 	data() {
 		return {
