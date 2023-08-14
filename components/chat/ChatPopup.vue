@@ -1,6 +1,6 @@
 <template>
 	<div class="fixed bottom-5 right-2 z-[9999]">
-		<div :class="{'hide-popup': !openPopup}" class="relative max-w-[365px] w-[365px] max-h-[400px]">
+		<div :class="{'hide-popup': !openPopup}" class="relative max-w-[365px] w-[365px] max-h-[600px]">
 			<div
 			@click="openPopup = false"
 				class="bg-[rgba(255,255,255,0.08)] z-20 w-[30px] h-[30px] absolute -top-3 left-2 cursor-pointer rounded-full flex justify-center items-center">
