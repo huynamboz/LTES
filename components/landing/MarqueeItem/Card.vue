@@ -1,0 +1,28 @@
+<script setup lang="ts">
+interface MarqueeItemProps {
+  title: string
+  description: string
+  image: string
+}
+defineProps<MarqueeItemProps>()
+</script>
+
+<template>
+  <div class="w-[320px] h-[335px] p-2">
+    <div class="w-full h-full border border-[#212344] overflow-hidden rounded-2xl bg-[#161528]">
+      <div class="w-full h-[65%]">
+        <img class="w-full h-full object-cover" :src="image" alt="">
+      </div>
+      <div class="h-[35%]">
+        <div class="p-4">
+          <h3 class="text-[20px] font-bold text-white">
+            {{ title }}
+          </h3>
+          <p class="text-[13px] text-gray-400 mt-2">
+            {{ description }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
