@@ -1,5 +1,5 @@
 <template>
-  <section id="summer" class="mt-48">
+  <section id="summer" class="mt-40">
     <div>
       <h2 class="text-center text-5xl font-black italic">
         <div
