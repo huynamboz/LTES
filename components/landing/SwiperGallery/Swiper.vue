@@ -26,7 +26,6 @@ export default {
 </script>
 
 <template>
-  <ClientOnly>
     <Swiper
       :autoplay="{
         delay: 1800,
@@ -42,5 +41,4 @@ export default {
         <img class="h-full object-cover w-full" :src="`/assets/images/recap/small/${n}.jpg`" alt="">
       </SwiperSlide>
     </Swiper>
-  </ClientOnly>
 </template>
