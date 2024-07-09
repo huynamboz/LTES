@@ -3,7 +3,7 @@ const listSummer = ref([
   {
     title: 'Mùa trại UP 1',
     description: 'Lorem ipsum dolor sit amet, ',
-    image: '/assets/images/summer/up1.png',
+    image: '/assets/images/summer/up1.jpg',
     year: 2017,
   },
   {
@@ -27,7 +27,7 @@ const listSummer = ref([
   {
     title: 'WARRIORS WANDERLUST',
     description: 'Lorem ipsum dolor sit amet, ',
-    image: '/assets/images/summer/warrios.png',
+    image: '/assets/images/summer/warrios.jpg',
     year: 2022,
   },
   {

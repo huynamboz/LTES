@@ -12,6 +12,7 @@ defineProps<MarqueeItemProps>()
   <div class="w-[320px] h-[335px] p-2">
     <div class="w-full h-full border border-[#212344] overflow-hidden rounded-2xl bg-[#161528]">
       <div class="w-full h-[65%] relative">
+        <!-- <NuxtImg class="w-full h-full object-cover" :src="image" loading="lazy" /> -->
         <img class="w-full h-full object-cover" :src="image" alt="">
         <!-- tag -->
         <div class="absolute top-4 left-4 bg-[#FFD700] px-2 py-1 rounded-full">

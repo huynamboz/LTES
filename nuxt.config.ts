@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   app: {
-    buildAssetsDir: '_assets',
+    buildAssetsDir: 'assets',
     head: {
       link: [{ rel: 'icon', type: 'image/png', href: '/logo.jpg' }],
     },
@@ -19,6 +19,7 @@ export default defineNuxtConfig({
     '@vueuse/motion/nuxt',
     '@nuxt/icon',
     'nuxt-marquee',
+    '@nuxt/image',
   ],
   css: ['~/assets/css/main.css'],
   tailwindcss: {

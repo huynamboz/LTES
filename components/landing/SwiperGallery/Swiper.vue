@@ -39,7 +39,7 @@ export default {
       class="mySwiper"
     >
       <SwiperSlide v-for="n in 9" :key="n">
-        <img class="h-full object-cover w-full" :src="`/assets/images/recap/${n}.jpg`" alt="">
+        <img class="h-full object-cover w-full" :src="`/assets/images/recap/small/${n}.jpg`" alt="">
       </SwiperSlide>
     </Swiper>
   </ClientOnly>

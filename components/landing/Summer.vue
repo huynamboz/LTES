@@ -50,7 +50,7 @@
           </div>
         </div>
         <div class="flex-1">
-          <img class="w-full h-full object-cover" src="@/assets/images/hoian.jpg" alt="">
+          <img loading="lazy" class="w-full h-full object-cover" src="@/assets/images/hoian.jpg" alt="">
         </div>
       </div>
       <!-- end card -->

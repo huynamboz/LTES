@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@nuxt/icon": "^1.0.0",
+    "@nuxt/image": "^1.7.0",
     "@vueuse/motion": "^2.2.3",
     "nuxt": "^3.12.3",
     "nuxt-marquee": "^1.0.4",
