@@ -1,12 +1,24 @@
+<script setup lang="ts">
+onMounted(async () => {
+
+})
+</script>
+
 <template>
-  <section class=" flex w-full justify-center">
+  <section id="particles-js" class="max-md:pt-40 md:min-h-screen flex w-full justify-center overflow-hidden">
     <!-- <h1 class="font-['Rubik_Mono_One'] text-center text-[70px]">
       <span>The</span> <span>Code</span> <br> <span>Breaker</span> <span>2024</span>
     </h1> -->
-   <div class="w-[70%] relative">
-    <img class="w-full relative z-10" src="/public/assets/images/big-logo.png" alt="">
-    <img class="w-full absolute top-0 left-0 z[-1] animate-spin-slow" src="/public/assets/images/rounded.png" alt="">
-   </div>
-    <!-- <button class="z-50 bg-primary h-10 fixed px-5 rounded-3xl bottom-4 text-gray-800 left-1/2 -translate-x-1/2">Điền form ngay</button> -->
+    <div class="w-full flex flex-col items-center relative">
+      <div class="max-md:w-[80%] w-[70%] relative">
+        <img class="w-full relative z-10" src="/public/assets/images/big-logo.png" alt="">
+        <img class="w-full absolute top-0 left-0 z[-1] animate-spin-slow" src="/public/assets/images/rounded.png" alt="">
+      </div>
+      <img style="mix-blend-mode: lighten;" class="w-full absolute top-0 left-0 z[-1] opacity-80" src="/public/assets/images/bg-tech.png" alt="">
+      <button class="flex items-center gap-1 border border-white hover:bg-white hover:text-black transition-all duration-100 h-10 px-5 -translate-y-10 rounded-3xl font-semibold cursor-pointer z-10">
+        Đăng ký ngay
+        <Icon name="material-symbols:arrow-right-alt-rounded" class=" text-lg" />
+      </button>
+    </div>
   </section>
 </template>

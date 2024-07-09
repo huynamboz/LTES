@@ -9,7 +9,8 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint:fix": "eslint . --fix",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "deploy": "nuxt generate && gh-pages -d .output/public"
   },
   "dependencies": {
     "@nuxt/icon": "^1.0.0",
@@ -17,11 +18,17 @@
     "nuxt": "^3.12.3",
     "nuxt-marquee": "^1.0.4",
     "nuxt-swiper": "^1.2.2",
+    "particles.js": "^2.0.0",
+    "swiper": "^11.1.4",
     "vue": "latest"
   },
   "devDependencies": {
     "@antfu/eslint-config": "2.22.0-beta.1",
+    "@iconify-json/ic": "^1.1.17",
+    "@iconify-json/material-symbols": "^1.1.83",
+    "@iconify-json/svg-spinners": "^1.1.2",
     "@nuxtjs/tailwindcss": "^6.12.0",
-    "eslint": "^9.6.0"
+    "eslint": "^9.6.0",
+    "gh-pages": "^6.1.1"
   }
 }

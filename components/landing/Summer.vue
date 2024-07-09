@@ -1,7 +1,7 @@
 <template>
-  <section id="summer" class="mt-40">
+  <section id="summer" class=" mt-36 px-5 overflow-hidden">
     <div>
-      <h2 class="text-center text-5xl font-black italic">
+      <h2 class="max-md:text-4xl text-center text-5xl font-black italic">
         <div
           v-motion
           :initial="{ opacity: 0, x: -200 }"
@@ -24,7 +24,7 @@
       </h2>
 
       <!-- card -->
-      <div class="flex h-[500px] overflow-hidden border border-gray-border-primary bg-[rgb(19,19,19)] rounded-[30px] mt-20">
+      <div class="max-md:flex-col flex max-md:h-[800px] h-[500px] overflow-hidden border border-gray-border-primary bg-[rgb(19,19,19)] rounded-[30px] mt-20">
         <div class="flex-1">
           <div class="flex flex-col justify-between h-full p-20 px-12">
             <div>
@@ -55,7 +55,7 @@
       </div>
       <!-- end card -->
 
-      <div class="flex mt-32">
+      <div class="max-md:flex-col flex mt-32">
         <div class="flex-1">
           <img style="mix-blend-mode: lighten;" class="w-full" src="@/assets/images/tech2.webp" alt="">
         </div>
@@ -75,7 +75,7 @@
         </div>
       </div>
 
-      <div class="flex mt-32">
+      <div class="max-md:flex-col flex mt-32">
         <div class="flex-1 flex justify-start">
           <div class="flex w-[80%] flex-col items-start">
             <h3 class="text-4xl font-bold">

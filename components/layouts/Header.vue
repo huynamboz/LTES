@@ -1,6 +1,13 @@
+<script setup lang="ts">
+function handleScroll() {
+  const aboutSection = document.getElementById('about')
+  aboutSection?.scrollIntoView({ behavior: 'smooth', block: 'start'})
+}
+</script>
+
 <template>
   <header class="fixed z-50 top-8 left-0 w-full flex justify-center items-center">
-    <div class="flex items-center gap-8 w-fit">
+    <div class="flex items-center max-md:flex-col max-md:gap-2 gap-8 w-fit">
       <p class="text-4xl font-['Permanent_Marker']">
         LTES
       </p>
@@ -8,14 +15,15 @@
         <li class="inline-block rounded-lg cursor-pointer hover:bg-[rgba(255,255,255,0.15)] px-4 py-2 text-white">
           Trang chủ
         </li>
-        <li class="inline-block rounded-lg cursor-pointer hover:bg-[rgba(255,255,255,0.15)] px-4 py-2 text-white">
+        <li class="max-md:hidden inline-block rounded-lg cursor-pointer hover:bg-[rgba(255,255,255,0.15)] px-4 py-2 text-white">
           Giới thiệu
         </li>
-        <li class="inline-block rounded-lg cursor-pointer hover:bg-[rgba(255,255,255,0.15)] px-4 py-2 text-white">
+        <li class="max-md:hidden inline-block rounded-lg cursor-pointer hover:bg-[rgba(255,255,255,0.15)] px-4 py-2 text-white">
           Liên hệ
         </li>
-        <li class="inline-block rounded-lg cursor-pointer bg-[rgba(255,255,255,0.15)] hover:bg-[#43ddce] hover:text-black px-4 py-2 text-white">
+        <li class="inline-flex items-center gap-1 pr-2 rounded-lg cursor-pointer bg-[rgba(255,255,255,0.15)] hover:bg-[#43ddce] hover:text-black px-4 py-2 text-white" @click="handleScroll">
           Khám phá ngay
+          <Icon name="svg-spinners:pulse-2" class="text-lg" />
         </li>
       </ul>
     </div>

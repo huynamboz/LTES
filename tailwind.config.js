@@ -22,6 +22,7 @@ export default {
         'spin-slow': 'spin 20s linear infinite',
       },
       backgroundImage: {
+        'purple-blur': 'radial-gradient(circle at 50% 40%, rgba(28, 23, 67, .8), rgba(28, 23, 67, 0) 55%)',
         'green-stroke': 'url("/public/assets/images/green-stroke.png")',
         'dot': 'url("/public/assets/images/dot.svg")',
       },

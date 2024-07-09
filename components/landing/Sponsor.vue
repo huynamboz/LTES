@@ -1,10 +1,10 @@
 <template>
-  <section id="sponsor">
+  <section id="sponsor" class="mt-20 overflow-hidden">
     <div class="flex flex-col items-center">
       <h2 class="text-2xl text-gray-500 font-bold">
         Nhà tài trợ
       </h2>
-      <div class="flex justify-center items-center gap-8 mt-8">
+      <div class="flex justify-center max-md:flex-col items-center gap-8 mt-8">
         <!-- sponsor 1 -->
         <div class="flex shadow-xl w-[340px] gap-2 p-2 rounded-xl bg-[rgba(255,255,255,0.1)] border border-[rgba(255,255,255,0.15)]">
           <img class="min-w-32 w-32 h-28 object-cover rounded-md" src="@/assets/images/lasimi.jpg" alt="">
