@@ -1,5 +1,5 @@
 <template>
-  <section id="about" class="mt-32 px-5 overflow-hidden h-fit">
+  <section id="about" class="mt-32 px-5 h-fit scroll-my-40">
     <div class="flex max-md:flex-col max-md:gap-10">
       <div class="flex-1">
         <h2
@@ -9,7 +9,7 @@
           :delay="200"
           class="max-md:text-3xl text-5xl font-bold"
         >
-          Giới thiệu về LTES <br> <span class=" bg-green-stroke bg-no-repeat bg-contain bg-bottom"> Let's Fly High</span>
+          Giới thiệu về LTES <br> <span class="bg-green-stroke bg-no-repeat bg-contain bg-bottom"> Let's Fly High</span>
         </h2>
         <div
           v-motion

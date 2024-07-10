@@ -5,7 +5,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <section id="particles-js" class="max-md:pt-40 md:min-h-screen flex w-full justify-center overflow-hidden">
+  <section id="hero" class="max-md:pt-40 md:min-h-screen flex w-full justify-center overflow-hidden">
     <!-- <h1 class="font-['Rubik_Mono_One'] text-center text-[70px]">
       <span>The</span> <span>Code</span> <br> <span>Breaker</span> <span>2024</span>
     </h1> -->

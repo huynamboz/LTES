@@ -1,5 +1,5 @@
 <template>
-  <section id="summer" class=" mt-36 px-5 overflow-hidden">
+  <section id="summer" class=" mt-36 px-5 scroll-my-40">
     <div>
       <h2 class="max-md:text-4xl text-center text-5xl font-black italic">
         <div
@@ -65,10 +65,10 @@
               Bối cảnh
             </h3>
             <p class="text-gray-400 mt-4 text-end">
-              Bối cảnh được lấy từ gian phòng thí nghiệm và con tàu du 
-              hành thời gian của Tiến sĩ Wisdom, trại sinh sẽ đóng vai 
-              những người giải mã, khám phá các hệ thống mật mã và manh 
-              mối để tìm ra vị trí chính xác của bản thiết kế tàu vũ trụ 
+              Bối cảnh được lấy từ gian phòng thí nghiệm và con tàu du
+              hành thời gian của Tiến sĩ Wisdom, trại sinh sẽ đóng vai
+              những người giải mã, khám phá các hệ thống mật mã và manh
+              mối để tìm ra vị trí chính xác của bản thiết kế tàu vũ trụ
               bị đánh cắp bởi KKid.
             </p>
           </div>
@@ -82,13 +82,13 @@
               Khám phá vùng đất mới
             </h3>
             <p class="text-gray-400 mt-4 text-start">
-              Tham gia trại hè, các bạn sẽ có cơ hội khám phá tiềm năng, 
-              nhận diện những hạn chế của bản thân, từ đó, học cách giải 
-              quyết hiệu quả các vấn đề khó khăn và vượt qua những trở 
-              ngại trong cuộc sống. Trại hè này không chỉ là cuộc phiêu 
+              Tham gia trại hè, các bạn sẽ có cơ hội khám phá tiềm năng,
+              nhận diện những hạn chế của bản thân, từ đó, học cách giải
+              quyết hiệu quả các vấn đề khó khăn và vượt qua những trở
+              ngại trong cuộc sống. Trại hè này không chỉ là cuộc phiêu
               lưu tìm kiếm và giải mã các manh mối vật chất, mà còn là
-               hành trình tự khám phá và phát triển bản thân đầy ý nghĩa
-                đối với mỗi trại sinh.
+              hành trình tự khám phá và phát triển bản thân đầy ý nghĩa
+              đối với mỗi trại sinh.
             </p>
           </div>
         </div>
@@ -96,7 +96,6 @@
           <img style="mix-blend-mode: lighten;" class="w-full" src="@/assets/images/tech3.gif" alt="">
         </div>
       </div>
-
     </div>
   </section>
 </template>
