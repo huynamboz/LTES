@@ -1,0 +1,6 @@
+const style = '.vfm-marquee-container{display:flex;flex-direction:row;overflow-x:hidden;position:relative;transform:var(--transform);width:var(--width)}.vfm-marquee-container:hover div{animation-play-state:var(--pause-on-hover)}.vfm-marquee-container:active div{animation-play-state:var(--pause-on-click)}.vfm-overlay{height:100%;position:absolute;width:100%}.vfm-overlay:after,.vfm-overlay:before{background:linear-gradient(to right,var(--gradient-color),hsla(0,0%,100%,0));content:"";height:100%;pointer-events:none;position:absolute;touch-action:none;width:var(--gradient-width);z-index:2}.vfm-overlay:after{right:0;top:0;transform:rotate(180deg)}.vfm-overlay:before{left:0;top:0}.vfm-marquee{align-items:center;animation:scroll var(--duration) linear var(--delay) var(--iteration-count);animation-delay:var(--delay);animation-direction:var(--direction);animation-play-state:var(--play);display:flex;flex:0 0 auto;flex-direction:row;min-width:var(--min-width);z-index:1}@keyframes scroll{0%{transform:translate(0)}to{transform:translate(-100%)}}.vfm-parent{align-items:center;display:flex;flex:0 0 auto;flex-direction:row;min-width:auto}.vfm-parent>*{transform:var(--transform)}';
+
+const NuxtMarqueeStyles_Be_QXtmv = [style];
+
+export { NuxtMarqueeStyles_Be_QXtmv as default };
+//# sourceMappingURL=NuxtMarquee-styles.Be_QXtmv.mjs.map
