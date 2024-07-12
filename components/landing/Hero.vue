@@ -14,10 +14,10 @@ onMounted(async () => {
         <NuxtImg class="w-full relative z-10" preload src="/assets/images/logo-com.png" />
         <!-- <img src="/public/assets/images/big-logo.png" alt=""> -->
         <!-- <img class="w-full absolute top-0 left-0 z[-1] animate-spin-slow" src="/public/assets/images/rounded.png" alt=""> -->
-         <NuxtImg class="w-full absolute top-0 left-0 z[-1] animate-spin-slow" preload src="/assets/images/rounded-com.png" />
+        <NuxtImg class="w-full absolute top-0 left-0 z[-1] animate-spin-slow" preload src="/assets/images/rounded-com.png" />
       </div>
       <img style="mix-blend-mode: lighten;" class="w-full absolute top-0 left-0 z[-1] opacity-80" src="/public/assets/images/bg-tech.png" alt="">
-      <a hr class="flex items-center gap-1 border border-white hover:bg-white hover:text-black transition-all duration-100 h-10 px-5 -translate-y-10 rounded-3xl font-semibold cursor-pointer z-10">
+      <a href="https://forms.gle/Zfc5oEvDi6Jp5Zgj7" class="flex items-center gap-1 border border-white hover:bg-white hover:text-black transition-all duration-100 h-10 px-5 -translate-y-10 rounded-3xl font-semibold cursor-pointer z-10">
         Đăng ký ngay
         <Icon name="material-symbols:arrow-right-alt-rounded" class=" text-lg" />
       </a>

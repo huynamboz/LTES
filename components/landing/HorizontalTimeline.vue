@@ -16,12 +16,12 @@
       <li class="">
         <div class="content top">
           <span class="text-slate-500">Phỏng vấn campers</span>
-          <p class="">(20/9)</p>
+          <p class="">(26-31/07)</p>
         </div>
       </li>
       <li>
         <div class="content bottom">
-          <p class="">(20/9)</p>
+          <p class="">(11-12/08)</p>
           <span class="text-slate-500">Tổ chức trại</span>
         </div>
       </li>
