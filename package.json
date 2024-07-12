@@ -10,7 +10,8 @@
     "postinstall": "nuxt prepare",
     "lint:fix": "eslint . --fix",
     "lint": "eslint .",
-    "deploy": "nuxt generate && gh-pages -d .output/public"
+    "deploy": "nuxt generate && gh-pages -d .output/public",
+    "deploy-build": " node ./scripts/deploy.js"
   },
   "dependencies": {
     "@nuxt/icon": "^1.0.0",
@@ -30,6 +31,7 @@
     "@iconify-json/svg-spinners": "^1.1.2",
     "@nuxtjs/tailwindcss": "^6.12.0",
     "eslint": "^9.6.0",
-    "gh-pages": "^6.1.1"
+    "gh-pages": "^6.1.1",
+    "sass": "^1.77.8"
   }
 }

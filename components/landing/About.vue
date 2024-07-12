@@ -1,5 +1,5 @@
 <template>
-  <section id="about" class="mt-32 px-5 h-fit scroll-my-40">
+  <section id="about" class="mt-32 overflow-hidden px-5 h-fit scroll-my-40">
     <div class="flex max-md:flex-col max-md:gap-10">
       <div class="flex-1">
         <h2

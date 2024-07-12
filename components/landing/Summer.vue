@@ -1,5 +1,5 @@
 <template>
-  <section id="summer" class=" mt-36 px-5 scroll-my-40">
+  <section id="summer" class=" mt-36 px-5 scroll-my-40 overflow-hidden">
     <div>
       <h2 class="max-md:text-4xl text-center text-5xl font-black italic">
         <div

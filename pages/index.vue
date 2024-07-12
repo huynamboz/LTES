@@ -10,10 +10,11 @@ useSeoMeta({
 
 <template>
   <main class="flex flex-col items-center w-full">
-    <section class="fixed top-0 left-0 h-screen w-full z-[-1] bg-dot opacity-75">
+    <!-- <section class="fixed top-0 left-0 h-screen w-full z-[-1] bg-dot opacity-75">
       <div class="bg-purple-blur w-full h-full" />
-    </section>
+    </section> -->
     <LandingHero />
+    <LandingHorizontalTimeline />
     <div class="w-full max-w-[1024px]">
       <LandingSponsor />
       <LandingAbout />
