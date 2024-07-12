@@ -4,12 +4,12 @@
       <li class="active">
         <div class="content top">
           <span class="text-slate-500">Tuyển campers Early Birds</span>
-          <p class="">(20/9)</p>
+          <p class="">(12-18/67)</p>
         </div>
       </li>
       <li>
         <div class="content bottom">
-          <p class="">(20/9)</p>
+          <p class="">(19-23/07)</p>
           <span class="text-slate-500">Tuyển campers Đợt Thường</span>
         </div>
       </li>
