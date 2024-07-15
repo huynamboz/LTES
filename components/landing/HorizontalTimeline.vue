@@ -2,26 +2,60 @@
   <section class="py-20 w-full flex justify-center">
     <ol>
       <li class="active">
-        <div class="content top">
+        <div
+          v-motion
+          :initial="{ opacity: 0, y: -100 }"
+          :visible-once="{ opacity: 1, y: 0, x: '-50%' }"
+          :duration="600"
+          :delay="300" class="content top"
+        >
           <span class="text-slate-500">Tuyển campers Early Birds</span>
-          <p class="">(12-18/67)</p>
+          <p class="">
+            (12-18/67)
+          </p>
         </div>
       </li>
       <li>
-        <div class="content bottom">
-          <p class="">(19-23/07)</p>
+        <div
+          v-motion
+          :initial="{ opacity: 0, y: 100 }"
+          :visible-once="{ opacity: 1, y: 0, x: '-50%' }"
+          :duration="600"
+          :delay="300" class="content bottom"
+        >
+          <p class="">
+            (19-23/07)
+          </p>
           <span class="text-slate-500">Tuyển campers Đợt Thường</span>
         </div>
       </li>
       <li class="">
-        <div class="content top">
+        <div
+          v-motion
+          :initial="{ opacity: 0, y: -100 }"
+          :visible-once="{ opacity: 1, y: 0, x: '-50%' }"
+          :duration="600"
+          :delay="300"
+          class="content top"
+        >
           <span class="text-slate-500">Phỏng vấn campers</span>
-          <p class="">(26-31/07)</p>
+          <p class="">
+            (26-31/07)
+          </p>
         </div>
       </li>
       <li>
-        <div class="content bottom">
-          <p class="">(11-12/08)</p>
+        <div
+          v-motion
+          :initial="{ opacity: 0, y: 100 }"
+          :visible-once="{ opacity: 1, y: 0, x: '-50%' }"
+          :duration="600"
+          :delay="300"
+          class="content bottom"
+        >
+          <p class="">
+            (11-12/08)
+          </p>
           <span class="text-slate-500">Tổ chức trại</span>
         </div>
       </li>

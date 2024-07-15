@@ -46,9 +46,11 @@
         <LandingSwiperGallerySwiper />
       </div>
     </div>
+    <LandingCore />
+    <!-- LOOKBACK -->
     <div class="flex flex-col items-center mt-28">
       <h2 class="text-4xl max-md:text-3xl font-bold text-gray-200 text-center">
-        Look back Warriors Wanderlust
+        Looking back Warriors Wanderlust
       </h2>
       <p class="max-md:text-sm text-center mt-5 text-gray-300 w-[70%]">
         Dự án trại hè 2 ngày 1 đêm <span class="text-primary font-bold">“Warriors Wanderlust”</span>

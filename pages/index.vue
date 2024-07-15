@@ -23,5 +23,6 @@ useSeoMeta({
     <div class="w-full max-w-[1024px]">
       <LandingSummer />
     </div>
+    <LandingEnd />
   </main>
 </template>

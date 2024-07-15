@@ -30,7 +30,7 @@ function handleScroll(section: string) {
         </li>
         <li
           class="max-md:hidden inline-block rounded-lg cursor-pointer hover:bg-[rgba(255,255,255,0.15)] px-4 py-2 text-white"
-          @click="handleScroll('contact')"
+          @click="handleScroll('footer')"
         >
           Liên hệ
         </li>

@@ -24,7 +24,7 @@
       </h2>
 
       <!-- card -->
-      <div class="max-md:flex-col flex max-md:h-[800px] h-[500px] overflow-hidden border border-gray-border-primary bg-[rgb(19,19,19)] rounded-[30px] mt-20">
+      <div class="max-md:flex-col flex max-md:h-[800px] h-[500px] overflow-hidden border border-gray-border-primary  bg-[#161528] rounded-[30px] mt-20">
         <div class="flex-1">
           <div class="flex flex-col justify-between h-full p-20 px-12">
             <div>
@@ -43,7 +43,7 @@
               :initial="{ opacity: 0, scale: 0.5 }"
               :visible-once="{ opacity: 1, scale: 1 }"
               :delay="300"
-              class="bg-[#30a963] w-fit text-sm h-10 px-4 rounded-xl"
+              class="bg-[#30a963] w-fit text-sm h-10 px-4 rounded-xl mt-5"
             >
               Tiếp tục khám phá
             </button>
